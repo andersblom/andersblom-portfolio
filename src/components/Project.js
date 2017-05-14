@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import projectData from '../data/projects.json';
 
@@ -14,7 +15,11 @@ export default class Project extends Component {
         }
         return(
             <div>
-                this is the project: {projectForRender.title}
+                {/*TODO: Link has to point to -1 history*/}
+                <Link to="#">X</Link>
+                <div className="title">{projectForRender.title}</div>
+                <div className="hero-img" style={{ backgroundImage: `url(${projectForRender.heroimage})`, "background-size": "cover", "height": "200px" }}></div>
+                <div className="content">{projectForRender.content}</div>
             </div>
         );
     }
