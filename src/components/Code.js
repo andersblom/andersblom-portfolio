@@ -10,9 +10,8 @@ export default class Code extends Component {
     render() {
         return(
             <div>
-                <Sidebar match={this.props.match} />
-                Code component             
-                <Route exact path={this.props.match.url} component={Work} />
+                <Sidebar match={this.props.match} />   
+                <Route exact path={`${this.props.match.url}/`} component={Work} />
                 <Route path={`${this.props.match.url}/contact`} component={Contact} />
                 <Route path={`${this.props.match.url}/project/:projectId`} component={Project} />
             </div>

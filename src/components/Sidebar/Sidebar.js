@@ -15,10 +15,6 @@ export default class Sidebar extends Component {
         return(
             <div style={{background: '#dedede'}}>
                 <Logo />
-                <ul>
-                    <li><Link to="/design">Design</Link></li>
-                    <li><Link to="/code">Code</Link></li>
-                </ul>
                 <hr />
                 <ul>
                     <li><Link to={`${this.props.match.url}`}>Work</Link></li>
