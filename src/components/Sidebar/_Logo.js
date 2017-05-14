@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 
-
-
-export default class Work extends Component {
+export default class Logo extends Component {
     render() {
         return(
             <div>
-                projects
+              Anders Blom
             </div>
         );
     }

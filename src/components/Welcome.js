@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
+import Sidebar from './Sidebar/Sidebar';
+
 export default class Welcome extends Component {
     render() {
         return(
-            <h1>Ummm hi.</h1>
+            <div>
+                <Sidebar match={this.props.match} />
+            </div>
         );
     }
 }

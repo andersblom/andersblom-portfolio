@@ -1,9 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import routes from './router';
+import { BrowserRouter as Router, Route, Switch, browserHistory } from 'react-router-dom';
+
 import './index.css';
 
-ReactDOM.render(
-  routes,
-  document.getElementById('root')
+import App from './components/App';
+import Welcome from './components/Welcome';
+import Design from './components/Design';
+import Code from './components/Code';
+
+ReactDOM.render((
+    <App>
+      <Router history={browserHistory}>
+        <Switch>
+            <Route exact path="/" component={Welcome} />
+            <Route path="/design" component={Design} />
+            <Route path="/code" component={Code} />
+        </Switch>
+      </Router>
+    </App>  
+  
+), document.getElementById('root')
 );

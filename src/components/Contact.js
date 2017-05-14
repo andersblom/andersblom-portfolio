@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
 
-
-
-export default class Work extends Component {
+export default class Contact extends Component {
     render() {
         return(
             <div>
-                projects
+                31752836 lul                
             </div>
         );
     }
