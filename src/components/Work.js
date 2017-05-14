@@ -5,7 +5,6 @@ import projectData from '../data/projects.json';
 
 export default class Work extends Component {
     render() {
-        console.log(projectData, this.props);
         return(
             <div>
                 <ul>

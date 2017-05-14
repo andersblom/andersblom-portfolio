@@ -18,7 +18,7 @@ export default class Project extends Component {
                 {/*TODO: Link has to point to -1 history*/}
                 <Link to="#">X</Link>
                 <div className="title">{projectForRender.title}</div>
-                <div className="hero-img" style={{ backgroundImage: `url(${projectForRender.heroimage})`, "background-size": "cover", "height": "200px" }}></div>
+                <div className="hero-img" style={{ backgroundImage: `url(${projectForRender.heroimage})`, "backgroundSize": "cover", "height": "200px" }}></div>
                 <div className="content">{projectForRender.content}</div>
             </div>
         );
