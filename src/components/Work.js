@@ -10,15 +10,17 @@ export default class Work extends Component {
                 <ul>
                     {/*TODO: Some filtering of projects so that design shows design*/}
                 {projectData.projects.map((item, index) => {
-                    return (
-                    <li key={index}>
-                        <Link to={`${this.props.match.url}/project/${item.slug}`} 
-                            key={index}
-                            title={item.title} 
-                        >{item.title}
-                        </Link>
-                    </li>
-                    );
+                    if ("/" + item.category === this.props.match.url || item.category === "both") {
+                       return (
+                        <li key={index}>
+                            <Link to={`${this.props.match.url}/project/${item.slug}`} 
+                                key={index}
+                                title={item.title} 
+                            >{item.title}
+                            </Link>
+                        </li>
+                        ); 
+                    }
                 })}
                 </ul>
             </div>
