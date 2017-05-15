@@ -12,6 +12,7 @@ export default class Code extends Component {
             <div>
                 <Sidebar match={this.props.match} />   
                 <Route exact path={`${this.props.match.url}/`} component={Work} />
+                {/*TODO: Contact-Route doesnt work if you dont select a category*/}
                 <Route path={`${this.props.match.url}/contact`} component={Contact} />
                 <Route path={`${this.props.match.url}/project/:projectId`} component={Project} />
             </div>

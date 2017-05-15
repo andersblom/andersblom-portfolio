@@ -13,15 +13,15 @@ export default class Project extends Component {
                 projectForRender = projectData.projects[i];
             }
         }
-        
+
         return(
             <div>
-                {/*TODO: Link has to point to -1 history*/}
+                {/*TODO: Project: X-Link has to point to -1 history*/}
                 <Link to="#">X</Link>
                 <div className="title">{projectForRender.title}</div>
                 <div className="hero-img" style={{ backgroundImage: `url(${projectForRender.heroimage})`, "backgroundSize": "cover", "height": "200px" }}></div>
                 
-                {/*TODO: Should probably find another way to do this foul action below.*/}
+                {/*TODO: Find alternative for dangerouslySetInnerHTML*/}
                 <div className="content" dangerouslySetInnerHTML={{__html: projectForRender.content}}></div>
             </div>
         );
