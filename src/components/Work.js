@@ -8,7 +8,6 @@ export default class Work extends Component {
         return(
             <div>
                 <ul>
-                    {/*TODO: Some filtering of projects so that design shows design*/}
                 {projectData.projects.map((item, index) => {
                     if ("/" + item.category === this.props.match.url || item.category === "both") {
                        return (
@@ -21,6 +20,7 @@ export default class Work extends Component {
                         </li>
                         ); 
                     }
+                    return false;
                 })}
                 </ul>
             </div>

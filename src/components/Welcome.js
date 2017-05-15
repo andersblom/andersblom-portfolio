@@ -7,6 +7,7 @@ export default class Welcome extends Component {
         return(
             <div>
                 <Sidebar match={this.props.match} />
+                Welcome zzz
             </div>
         );
     }
