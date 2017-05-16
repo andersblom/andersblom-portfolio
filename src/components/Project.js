@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+// TODO: Use contentful for content in stead of static JSON
 import projectData from '../data/projects.json';
 
 export default class Project extends Component {
