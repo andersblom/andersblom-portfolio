@@ -20,22 +20,24 @@ const client = contentful.createClient({
 var projectData;
 
 export default class Work extends Component {
+    constructor() {
+        super();
+        this.state = { itemsArray: "" };
+    }
     componentDidMount() {
-        
+        client.getEntries().then(response => { 
+            this.setState({ itemsArray: response.items });
+        }).catch(error => {
+            return error;
+        });        
     }
 
     render() {
-        client.getEntries().then(response => { 
-            response.items.map((item, index) => {
-                console.log(item, index);
-            });
-        }).catch(error => {
-            return error;
-        })
+        console.log("render: ", this.state.itemsArray[0]);
         return(
             <div>
                 <ul>
-                    {this.test}
+                   {this.state.itemsArray[0]}
                 </ul>
             </div>
         );
