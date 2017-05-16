@@ -25,6 +25,7 @@ export default class Work extends Component {
         this.state = { itemsArray: "" };
     }
     componentDidMount() {
+        // Code from: https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entries-collection
         client.getEntries().then(response => { 
             this.setState({ itemsArray: response.items });
         }).catch(error => {
@@ -33,6 +34,7 @@ export default class Work extends Component {
     }
 
     render() {
+        // TODO: this returns the array but async. messes it up when you try to go deeper
         console.log("render: ", this.state.itemsArray[0]);
         return(
             <div>
