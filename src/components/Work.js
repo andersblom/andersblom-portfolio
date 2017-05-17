@@ -39,7 +39,7 @@ export default class Work extends Component {
         return(
             <div>
                 <ul>
-                   {this.state.itemsArray[0]}
+                   {this.state.itemsArray.length}
                 </ul>
             </div>
         );
