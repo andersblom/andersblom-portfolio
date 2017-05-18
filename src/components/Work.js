@@ -35,6 +35,7 @@ export default class Work extends Component {
 
     render() {
         // TODO: this returns the array but async. messes it up when you try to go deeper
+        // TODO: Maybe check out this: https://twitter.com/manekinekko/status/855824609299636230
         console.log("render: ", this.state.itemsArray[0]);
         return(
             <div>
