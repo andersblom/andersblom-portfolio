@@ -23,6 +23,10 @@ export default class Project extends Component {
                 <div className="hero-img" style={{ backgroundImage: `url(${projectForRender.heroimage})`, "backgroundSize": "cover", "height": "200px" }}></div>
                 
                 {/*TODO: Find alternative for dangerouslySetInnerHTML*/}
+                {/*TODO: Render content with "marked":
+                    var marked = require('marked');
+                    console.log(marked('I am using __markdown__.'));
+                    // Outputs: <p>I am using <strong>markdown</strong>.</p> */}
                 <div className="content" dangerouslySetInnerHTML={{__html: projectForRender.content}}></div>
             </div>
         );
