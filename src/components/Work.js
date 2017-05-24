@@ -14,7 +14,7 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 
 var projectData;
 
-//TODO: Use a container-component for data that needs to be passed to Work AND project.
+//TODO: Use a container-component for data that needs to be passed to Work AND project. https://medium.com/@learnreact/container-components-c0e67432e005
 
 export default class Work extends Component {
     constructor() {
