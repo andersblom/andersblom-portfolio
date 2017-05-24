@@ -22,7 +22,7 @@ var projectData;
 export default class Work extends Component {
     constructor() {
         super();
-        this.state = { itemsArray: "" };
+        this.state = { itemsArray: null };
     }
     componentDidMount() {
         // Code from: https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entries-collection
@@ -36,14 +36,26 @@ export default class Work extends Component {
     render() {
         // TODO: this returns the array but async. messes it up when you try to go deeper
         // TODO: Maybe check out this: https://twitter.com/manekinekko/status/855824609299636230
-        console.log("render: ", this.state.itemsArray);
-        return(
-            <div>
-                <ul>
-                   {this.state.itemsArray.length}
-                </ul>
-            </div>
-        );
+        if (this.state.itemsArray === null) {
+            return(
+                <div>Loading..</div>
+            );
+        } else {
+            var projectData = this.state.itemsArray;
+            console.log("data: ",projectData);
+
+             // TODO: Gotta filter these projects based on location
+            return(
+                <div>
+                    <ul>
+                    {projectData.map((item, index) => {
+                        console.log(item,index);
+                        return(<li key={index}><Link to="xd">{item.fields.title}</Link></li>);
+                    })}
+                    </ul>
+                </div>
+            );
+        }
     }
 }
 
