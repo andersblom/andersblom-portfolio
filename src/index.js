@@ -11,7 +11,7 @@ import Code from './components/Code';
 
 ReactDOM.render((
     <App>
-      <Router history={browserHistory}>
+      <Router>
         <Switch>
             <Route exact path="/" component={Welcome} />
             <Route path="/design" component={Design} />
