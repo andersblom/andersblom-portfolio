@@ -20,6 +20,8 @@ export default class Design extends Component {
             assets: []
         };
     }
+
+    // TODO: if containerizing succeeds, merge Design+Code.js
     componentDidMount() {
         client.getEntries()
         .then(response => { 
