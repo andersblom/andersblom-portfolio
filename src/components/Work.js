@@ -19,21 +19,25 @@ var projectData;
 export default class Work extends Component {
     constructor() {
         super();
-        this.state = { itemsArray: null, assets: null };
+        this.state = {
+            itemsArray: null, 
+            assets: null 
+        };
     }
     componentDidMount() {
-        client.getEntries().then(response => { 
+        client.getEntries()
+        .then(response => { 
             this.setState({ itemsArray: response.items });
         }).catch(error => {
-            return error;
+            console.error(error);
         });    
 
         //TODO: currently logs all images (url will be in array.fields.file.url)
-        client.getAssets().then(response => { 
-            console.log(response.items);
+        client.getAssets()
+        .then(response => { 
             this.setState({ assets: response });
         }).catch(error => {
-            return error;
+            console.error(error);
         });        
     }
 
@@ -43,11 +47,10 @@ export default class Work extends Component {
                 <div>Loading..</div>
             );
         } else {
-            var projectData = this.state.itemsArray;
             return(
                 <div>
                     <ul>
-                    {projectData.map((item, index) => {
+                    {this.state.itemsArray.map((item, index) => {
                         //TODO: Remove this console.log spam line
                         console.log(item,index);
                         if (item.fields.category === this.props.match.url.replace("/", '') || item.fields.category === "both") {
