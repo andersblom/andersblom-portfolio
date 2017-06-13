@@ -16,6 +16,7 @@ ReactDOM.render((
             <Route exact path="/" component={Welcome} />
             <Route path="/design" component={Design} />
             <Route path="/code" component={Code} />
+            {/*TODO: Add 404 route here*/}
         </Switch>
       </Router>
     </App>  
