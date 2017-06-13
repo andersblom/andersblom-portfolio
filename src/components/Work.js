@@ -49,10 +49,8 @@ export default class Work extends Component {
                 <div>
                     <ul>
                     {this.state.projects.map((item, index) => {
-                        //TODO: Remove this console.log spam line
-                        console.log(item,index);
                         if (item.fields.category === this.props.match.url.replace("/", '') || item.fields.category === "both") {
-                            return(<li key={index}><Link to={`project/${item.fields.slug}`}>{item.fields.title}</Link></li>);
+                            return(<li key={index}><Link to={`${this.props.match.url}/project/${item.fields.slug}`}>{item.fields.title}</Link></li>);
                         }
 
                         return false;
