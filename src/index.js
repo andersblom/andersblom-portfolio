@@ -8,6 +8,7 @@ import App from './components/App';
 import Welcome from './components/Welcome';
 import Design from './components/Design';
 import Code from './components/Code';
+import NotFound from './components/NotFound';
 
 ReactDOM.render((
     <App>
@@ -16,7 +17,7 @@ ReactDOM.render((
             <Route exact path="/" component={Welcome} />
             <Route path="/design" component={Design} />
             <Route path="/code" component={Code} />
-            {/*TODO: Add 404 route here*/}
+            <Route component={NotFound} />
         </Switch>
       </Router>
     </App>  
