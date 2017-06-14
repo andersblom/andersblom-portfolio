@@ -16,8 +16,7 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 
 export default class Work extends Component {
     render() {
-        console.log(this.props);
-        var projectNodes = this.props.projects.projects.map((value) => 
+        var projectNodes = this.props.projects.map((value) => 
             <div onClick={() => this.props.history.push(`${this.props.match.url}/project/${value.fields.slug}`)} 
                 style={{backgroundImage: `url(${value.fields.heroimage.fields.file.url})`, cursor: 'pointer'}} 
                 to={`${this.props.match.url}/project/${value.fields.slug}`} 

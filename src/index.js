@@ -6,7 +6,7 @@ import './index.css';
 
 import App from './components/App';
 import Welcome from './components/Welcome';
-import Design from './components/Design';
+import Category from './components/Category';
 import Code from './components/Code';
 import NotFound from './components/NotFound';
 import Contact from './components/Contact';
@@ -17,9 +17,13 @@ ReactDOM.render((
       <Router>
         <Switch>
             <Route exact path="/" component={Welcome} />
-            <Route path="/design" component={Design} />
-            <Route path="/code" component={Code} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/design" render={(props) => (
+                <Category {...props} category="design"/>
+            )} /> />
+            <Route path="/code" render={(props) => (
+                <Category {...props} category="code"/>
+            )} /> />
+            
             <Route component={NotFound} />
         </Switch>
       </Router>

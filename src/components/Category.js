@@ -12,36 +12,36 @@ const client = contentful.createClient({
   accessToken: '255fc48deab6dd5408e34a23b067f57642ca699179a369cd8a8ae5910cf37903'
 })
 
-export default class Design extends Component {
+export default class Category extends Component {
     constructor() {
         super();
         this.state = {
-            projects: []
+            projects: [],
+            category: undefined
         };
     }
 
-    // TODO: if containerizing succeeds, merge Design+Code.js
     componentDidMount() {
         client.getEntries()
         .then(response => { 
             this.setState({ projects: response.items });
         }).catch(error => {
             console.error(error);
-        });    
+        }); 
+        this.setState({ category: this.props.category });   
     }
 
 
     render() {
-        console.log(this.props)
         return(
             <div>
                 <Sidebar match={this.props.match} />
                 <Route exact path={`${this.props.match.url}/`} render={(props) => (
-                    <Work {...props} projects={this.state} />
+                    <Work {...props} projects={this.state.projects} category={this.state.category} />
                 )}/>
                 <Route path={`${this.props.match.url}/contact`} component={Contact} />
                 <Route path={`${this.props.match.url}/project/:projectSlug`} render={(props) => (
-                    <ProjectSingle {...props} projects={this.state.projects}/>
+                    <ProjectSingle {...props} projects={this.state.projects} category={this.state.category}/>
                 )} />
             </div>
         );
