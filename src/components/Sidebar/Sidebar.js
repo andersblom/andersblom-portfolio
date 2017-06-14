@@ -22,6 +22,7 @@ export default class Sidebar extends Component {
     }
 
     render() {
+        console.log(this.props.match)
         return(
             <div style={{background: '#dedede'}}>
                 <Logo />
@@ -29,8 +30,7 @@ export default class Sidebar extends Component {
                 <ul>
                     {this.getWorkLink()}
                     {this.getRelevantShowcaseWebsite()}
-                    {/*TODO: Contact shows no sidebar etc*/}
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to={(this.props.match.url === "/") ? `/contact` : `${this.props.match.path}/contact`}>Contact</Link></li>
                 </ul>
             </div>
         );

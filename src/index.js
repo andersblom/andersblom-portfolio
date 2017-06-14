@@ -7,9 +7,9 @@ import './index.css';
 import App from './components/App';
 import Welcome from './components/Welcome';
 import Category from './components/Category';
-import Code from './components/Code';
 import NotFound from './components/NotFound';
 import Contact from './components/Contact';
+import Sidebar from './components/Sidebar/Sidebar';
 
 // TODO: ReactCSSTransitionGroup for animation
 ReactDOM.render((
@@ -24,6 +24,7 @@ ReactDOM.render((
                 <Category {...props} category="code"/>
             )} /> />
             
+            <Route path="/contact" render={(props) => (<div><Sidebar {...props} /><Contact /></div>)} />
             <Route component={NotFound} />
         </Switch>
       </Router>
