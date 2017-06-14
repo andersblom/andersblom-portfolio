@@ -9,9 +9,9 @@ import Welcome from './components/Welcome';
 import Design from './components/Design';
 import Code from './components/Code';
 import NotFound from './components/NotFound';
+import Contact from './components/Contact';
 
 // TODO: ReactCSSTransitionGroup for animation
-// TODO: Refresh -> 404. Consider catch-all: https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writting-manually
 ReactDOM.render((
     <App>
       <Router>
@@ -19,6 +19,7 @@ ReactDOM.render((
             <Route exact path="/" component={Welcome} />
             <Route path="/design" component={Design} />
             <Route path="/code" component={Code} />
+            <Route path="/contact" component={Contact} />
             <Route component={NotFound} />
         </Switch>
       </Router>

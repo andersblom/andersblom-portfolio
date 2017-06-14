@@ -14,11 +14,17 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 
 //TODO: Use a container-component for data that needs to be passed to Work AND project. https://medium.com/@learnreact/container-components-c0e67432e005
 
-export default class ProjectLink extends Component {
+export default class Work extends Component {
     render() {
-        console.log(this.props.projects.projects);
+        console.log(this.props);
         var projectNodes = this.props.projects.projects.map((value) => 
-            <Link to={`${this.props.match.url}/projects/${value.fields.slug}`} key={value.sys.id}>{value.fields.title}</Link>
+            <div onClick={() => this.props.history.push(`${this.props.match.url}/project/${value.fields.slug}`)} 
+                style={{backgroundImage: `url(${value.fields.heroimage.fields.file.url})`, cursor: 'pointer'}} 
+                to={`${this.props.match.url}/project/${value.fields.slug}`} 
+                key={value.sys.id}>
+                <div>{value.fields.title}</div>
+                <div>{value.fields.title}</div>
+            </div>
         );
         
 

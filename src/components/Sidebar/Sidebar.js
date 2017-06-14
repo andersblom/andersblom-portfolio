@@ -29,7 +29,8 @@ export default class Sidebar extends Component {
                 <ul>
                     {this.getWorkLink()}
                     {this.getRelevantShowcaseWebsite()}
-                    <li><Link to={`${this.props.match.url}/contact`}>Contact</Link></li>
+                    {/*TODO: Contact shows no sidebar etc*/}
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </div>
         );
