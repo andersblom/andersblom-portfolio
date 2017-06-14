@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import Sidebar from './components/Sidebar/Sidebar';
 
 // TODO: ReactCSSTransitionGroup for animation
+// TODO: Split components into folders w/css for modularizing the CSS along with components
 ReactDOM.render((
     <App>
       <Router>
