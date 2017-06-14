@@ -16,8 +16,13 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 
 export default class ProjectLink extends Component {
     render() {
-        this.props.projects.projects.map((index, value) => (
-            <li>xd</li>
-        ))
+        console.log(this.props.projects.projects);
+        var projectNodes = this.props.projects.projects.map((value) => 
+            <Link to={`${this.props.match.url}/projects/${value.fields.slug}`} key={value.sys.id}>{value.fields.title}</Link>
+        );
+        
+
+        // this.props.projects.projects.map((value, index) => {console.log(value)})
+        return <ul>{projectNodes}</ul>
     }
 }
