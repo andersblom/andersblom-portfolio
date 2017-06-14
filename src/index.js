@@ -10,6 +10,8 @@ import Design from './components/Design';
 import Code from './components/Code';
 import NotFound from './components/NotFound';
 
+// TODO: ReactCSSTransitionGroup for animation
+// TODO: Refresh -> 404. Consider catch-all: https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writting-manually
 ReactDOM.render((
     <App>
       <Router>

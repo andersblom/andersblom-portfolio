@@ -16,8 +16,8 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 
 export default class ProjectLink extends Component {
     render() {
-        this.props.projects.projects.map(function(index, value){
-            return <li>xd</li>
-        })
+        this.props.projects.projects.map((index, value) => (
+            <li>xd</li>
+        ))
     }
 }
