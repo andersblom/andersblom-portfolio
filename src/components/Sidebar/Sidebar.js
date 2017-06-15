@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import './sidebar.css';
+
 export default class Sidebar extends Component {
     constructor(props) {
         super(props);
@@ -27,10 +29,9 @@ export default class Sidebar extends Component {
 
     render() {
         return(
-            <div style={{background: '#dedede'}}>
+            <div className="sideBar">
                 <Link to="/" onClick={ this.changeCategoryHandler.bind(this, "both") }>Anders Blom</Link>
                 <ul>
-                    <li>State: {this.props.category}</li>
                     <li><Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}>Design</Link></li>
                     <li><Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}>Code</Link></li>
                 </ul>
