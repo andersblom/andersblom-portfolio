@@ -16,14 +16,20 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 
 export default class Work extends Component {
     render() {
-        var projectNodes = this.props.projects.map((value) => 
-            <div onClick={() => this.props.history.push(`${this.props.match.url}/project/${value.fields.slug}`)} 
-                style={{backgroundImage: `url(${value.fields.heroimage.fields.file.url})`, cursor: 'pointer'}} 
-                to={`${this.props.match.url}/project/${value.fields.slug}`} 
-                key={value.sys.id}>
-                <div>{value.fields.title}</div>
-                <div>{value.fields.title}</div>
-            </div>
+        var projectNodes = this.props.projects.map((value) => {
+            if (value.fields.category === this.props.category || value.fields.category === "both") {
+                return(
+                    <div onClick={() => this.props.history.push(`${this.props.match.url}/project/${value.fields.slug}`)} 
+                        style={{backgroundImage: `url(${value.fields.heroimage.fields.file.url})`, cursor: 'pointer'}} 
+                        to={`${this.props.match.url}/project/${value.fields.slug}`} 
+                        key={value.sys.id}>
+                        <div>{value.fields.title}</div>
+                        <div>{value.fields.title}</div>
+                    </div>
+                );
+            }
+        }
+            
         );
         
 

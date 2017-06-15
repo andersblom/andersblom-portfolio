@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import Logo from './_Logo';
-
 export default class Sidebar extends Component {
-
+    constructor(props) {
+        super(props);
+    }
     // Print "Work" link in sidebar
     getWorkLink() {
         if (this.props.match.url === "/design" || this.props.match.url === "/code") {
@@ -21,11 +21,19 @@ export default class Sidebar extends Component {
         }
     }
 
+    changeCategoryHandler(cat) {
+        this.props.categoryHandler(cat)
+    }
+
     render() {
-        console.log(this.props.match)
         return(
             <div style={{background: '#dedede'}}>
-                <Logo />
+                <Link to="/" onClick={ this.changeCategoryHandler.bind(this, "both") }>Anders Blom</Link>
+                <ul>
+                    <li>State: {this.props.category}</li>
+                    <li><Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}>Design</Link></li>
+                    <li><Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}>Code</Link></li>
+                </ul>
                 <hr />
                 <ul>
                     {this.getWorkLink()}

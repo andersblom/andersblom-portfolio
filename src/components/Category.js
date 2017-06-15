@@ -21,7 +21,7 @@ export default class Category extends Component {
         };
     }
 
-    componentDidMount() {
+    componentWillMount() {
         client.getEntries()
         .then(response => { 
             this.setState({ projects: response.items });
@@ -31,11 +31,16 @@ export default class Category extends Component {
         this.setState({ category: this.props.category });   
     }
 
+    changeCategory = (newCat) => {
+        this.setState({
+            category: newCat
+        })
+    }
 
     render() {
         return(
             <div>
-                <Sidebar match={this.props.match} />
+                <Sidebar match={this.props.match} category={this.state.category} categoryHandler={this.changeCategory} />
                 <Route exact path={`${this.props.match.url}/`} render={(props) => (
                     <Work {...props} projects={this.state.projects} category={this.state.category} />
                 )}/>
