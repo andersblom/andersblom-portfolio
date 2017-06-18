@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Sidebar from './Sidebar/Sidebar';
+import Sidebar from '../Sidebar/Sidebar';
 
 export default class Welcome extends Component {
     render() {

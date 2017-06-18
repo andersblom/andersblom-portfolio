@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.css';
 
 import App from './components/App';
-import Welcome from './components/Welcome';
-import Category from './components/Category';
-import NotFound from './components/NotFound';
-import Contact from './components/Contact';
+import Welcome from './components/Welcome/Welcome';
+import Category from './components/Category/Category';
+import NotFound from './components/NotFound/NotFound';
+import Contact from './components/Contact/Contact';
 import Sidebar from './components/Sidebar/Sidebar';
 
 // TODO: ReactCSSTransitionGroup for animation

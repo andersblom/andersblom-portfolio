@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-import Sidebar from './Sidebar/Sidebar';
-import Work from './Work';
-import Contact from './Contact';
-import ProjectSingle from './ProjectSingle';
+import Sidebar from '../Sidebar/Sidebar';
+import Work from '../Work/Work';
+import Contact from '../Contact/Contact';
+import ProjectSingle from '../ProjectSingle/ProjectSingle';
 
 const contentful = require('contentful')
 const client = contentful.createClient({
