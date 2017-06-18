@@ -34,6 +34,6 @@ export default class Work extends Component {
         
 
         // this.props.projects.projects.map((value, index) => {console.log(value)})
-        return <ul>{projectNodes}</ul>
+        return <div>{projectNodes}</div>
     }
 }

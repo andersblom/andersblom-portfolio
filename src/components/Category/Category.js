@@ -39,15 +39,17 @@ export default class Category extends Component {
 
     render() {
         return(
-            <div>
+            <div className="container">
                 <Sidebar match={this.props.match} category={this.state.category} categoryHandler={this.changeCategory} />
-                <Route exact path={`${this.props.match.url}/`} render={(props) => (
-                    <Work {...props} projects={this.state.projects} category={this.state.category} />
-                )}/>
-                <Route path={`${this.props.match.url}/contact/`} component={Contact} />
-                <Route path={`${this.props.match.url}/project/:projectSlug`} render={(props) => (
-                    <ProjectSingle {...props} projects={this.state.projects} category={this.state.category}/>
-                )} />
+                <div className="contentArea">
+                    <Route exact path={`${this.props.match.url}/`} render={(props) => (
+                        <Work {...props} projects={this.state.projects} category={this.state.category} />
+                    )}/>
+                    <Route path={`${this.props.match.url}/contact/`} component={Contact} />
+                    <Route path={`${this.props.match.url}/project/:projectSlug`} render={(props) => (
+                        <ProjectSingle {...props} projects={this.state.projects} category={this.state.category}/>
+                    )} />
+                </div>
             </div>
         );
     }

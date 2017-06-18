@@ -1,0 +1,13 @@
+body, html, #root, .App {
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100%;
+}
+
+.contentArea {
+    flex: 8 600px;
+}
