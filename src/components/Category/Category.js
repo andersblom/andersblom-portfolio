@@ -39,7 +39,7 @@ export default class Category extends Component {
 
     render() {
         return(
-            <div className="container">
+            <div className="container work">
                 <Sidebar match={this.props.match} category={this.state.category} categoryHandler={this.changeCategory} />
                 <div className="contentArea">
                     <Route exact path={`${this.props.match.url}/`} render={(props) => (

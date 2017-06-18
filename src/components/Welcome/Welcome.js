@@ -7,7 +7,7 @@ export default class Welcome extends Component {
         return(
             <div className="container">
                 <Sidebar match={this.props.match} />
-                <div className="contentArea">
+                <div className="contentArea welcome">
                     <div className="welcome-img"><img src="http://placehold.it/400x500" alt="Anders" /></div>
                     <h1>Hi there! I'm Anders.<br />
                         Product Designer and Front-end Developer from Denmark.

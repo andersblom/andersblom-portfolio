@@ -29,7 +29,7 @@ export default class Sidebar extends Component {
 
     render() {
         return(
-            <div className="sidebar">
+            <div className={"sidebar " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")}>
                 <Link to="/" onClick={ this.changeCategoryHandler.bind(this, "both") }>Anders Blom</Link>
                 <ul>
                     <li><Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}>Design</Link></li>
