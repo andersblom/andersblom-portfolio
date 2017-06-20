@@ -1,3 +1,4 @@
+@import '../global/global.scss';
 body, html, #root, .App {
     height: 100%;
 }
@@ -6,6 +7,9 @@ body, html, #root, .App {
     flex-wrap: wrap;
     flex-direction: row;
     height: 100%;
+    @include mq(xs) {
+        flex-direction: column;
+    }
 }
 
 .contentArea {
