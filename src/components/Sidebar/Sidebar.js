@@ -40,11 +40,11 @@ export default class Sidebar extends Component {
         return(
             <div className={"sidebar " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")}>
                 <div className="stateNav">
-                    <Link to="/design"><i className="fa fa-diamond" aria-hidden="true"></i></Link>
-                    <Link to="/code"><i className="fa fa-code" aria-hidden="true"></i></Link>
+                    <Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}><i className="fa fa-diamond" aria-hidden="true"></i></Link>
+                    <Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}><i className="fa fa-code" aria-hidden="true"></i></Link>
                 </div>
                 <div className="logo">
-                    <Link to="/" className="name" onClick={ this.changeCategoryHandler.bind(this, "both") }>Anders Blom</Link>
+                    <Link to="/" className="name" onClick={ this.changeCategoryHandler.bind(this, "both")}>Anders Blom</Link>
                     <div className="title">
                         {this.getTitle()}
                     </div>
