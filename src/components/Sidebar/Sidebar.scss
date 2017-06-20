@@ -18,6 +18,7 @@
                 color: $design-faded;
                 font-weight: 400;
                 text-transform: uppercase;
+                text-decoration: none;
                 @extend %animation200ms;
                 &:hover {
                     text-decoration: none;
@@ -75,7 +76,7 @@
         color: $design-faded;
     }
 
-    nav a {
+    nav ul li a {
         color: $design-faded;
     }
 }
@@ -94,7 +95,7 @@
         color: $code-text;
     }
 
-    nav a {
+    nav ul li a {
         color: $code-text;
     }
 }
