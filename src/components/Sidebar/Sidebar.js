@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import './sidebar.css';
+import './Sidebar.css';
 
 export default class Sidebar extends Component {
-    constructor(props) {
-        super(props);
-    }
+
     // Print "Work" link in sidebar
     getWorkLink() {
         if (this.props.match.url === "/design" || this.props.match.url === "/code") {
@@ -27,10 +25,30 @@ export default class Sidebar extends Component {
         this.props.categoryHandler(cat)
     }
 
+    getTitle() {
+        if (this.props.category === "code") {
+            return "Front-end Developer"
+        } else if (this.props.category === "design") {
+            return "Product/UI Designer"
+        } else {
+            return "Designer & Developer"
+        }
+        // Designer & Developer
+    }
+
     render() {
         return(
             <div className={"sidebar " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")}>
-                <Link to="/" onClick={ this.changeCategoryHandler.bind(this, "both") }>Anders Blom</Link>
+                <div className="stateNav">
+                    <Link to="/design"><i className="fa fa-diamond" aria-hidden="true"></i></Link>
+                    <Link to="/code"><i className="fa fa-code" aria-hidden="true"></i></Link>
+                </div>
+                <div className="logo">
+                    <Link to="/" className="name" onClick={ this.changeCategoryHandler.bind(this, "both") }>Anders Blom</Link>
+                    <div className="title">
+                        {this.getTitle()}
+                    </div>
+                </div>
                 <ul>
                     <li><Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}>Design</Link></li>
                     <li><Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}>Code</Link></li>

@@ -1,6 +1,100 @@
 @import '../../global/global.scss';
 .sidebar {
-    background-color: $code;
+    background-color: $white;
+    padding: 100px 90px 100px 60px;
     flex: 1 200px;
-    padding: 50px 20px 40px 30px;
+    @extend %font-stack-main;
+
+    ul {
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-top: 50px;
+        
+        li {
+            list-style-type: none;
+            margin: 0px;
+            margin-bottom: 14px;
+            a {
+                color: $design-faded;
+                font-weight: 400;
+                text-transform: uppercase;
+                @extend %animation200ms;
+                &:hover {
+                    text-decoration: none;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    .stateNav {
+        i {
+            color: $design-faded;
+            margin-bottom: 20px;
+            &:first-of-type {
+                margin-right: 20px;
+            }
+        }
+        .active {
+            color: $primary;
+        }
+    }
+
+    .logo {
+        .name {
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+}
+
+.neutral {
+    background-color: $white;
+    border-right: 1px solid $design;
+    border-bottom: 1px solid $design;
+    
+    .logo {
+        @extend %font-stack-design;
+        .title {
+            color: $design-faded;
+        }
+    }
+}
+
+.design {
+    background-color: $design;
+    
+    .logo {
+        @extend %font-stack-design;
+        .title {
+            color: $design-faded;
+        }
+    }
+    
+    .stateNav i {
+        color: $design-faded;
+    }
+
+    nav a {
+        color: $design-faded;
+    }
+}
+
+.code {
+    background-color: $code;
+
+    .logo {
+        @extend %font-stack-code;
+        .title {
+            color: $code-text;
+        }
+    }
+
+    .stateNav i {
+        color: $code-text;
+    }
+
+    nav a {
+        color: $code-text;
+    }
 }
