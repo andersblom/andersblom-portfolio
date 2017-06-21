@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 
+// TODO: Welcome could draw inspiration from:
+// https://dribbble.com/shots/3557349-Personal-Website-2017/attachments/791599
+
 export default class Welcome extends Component {
     render() {
         return(
