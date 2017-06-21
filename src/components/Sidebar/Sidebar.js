@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import './Sidebar.css';
+import './sidebar.css';
 
 export default class Sidebar extends Component {
 
@@ -38,7 +38,7 @@ export default class Sidebar extends Component {
 
     render() {
         return(
-            <div className={"sidebar " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")}>
+            <div className={"sidebar " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "") + (this.props.category === undefined ? "neutral" : "")}>
                 <div className="stateNav">
                     <Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}><i className="fa fa-diamond" aria-hidden="true"></i></Link>
                     <Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}><i className="fa fa-code" aria-hidden="true"></i></Link>
@@ -49,16 +49,20 @@ export default class Sidebar extends Component {
                         {this.getTitle()}
                     </div>
                 </div>
-                <ul>
-                    <li><Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}>Design</Link></li>
-                    <li><Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}>Code</Link></li>
-                </ul>
-                <hr />
-                <ul>
-                    {this.getWorkLink()}
-                    {this.getRelevantShowcaseWebsite()}
-                    <li><Link to={(this.props.match.url === "/") ? `/contact` : `${this.props.match.path}/contact`}>Contact</Link></li>
-                </ul>
+                {/*<nav>
+                    <ul>
+                        <li><Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}>Design</Link></li>
+                        <li><Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}>Code</Link></li>
+                    </ul>
+                </nav>*/}
+                
+                <nav>
+                    <ul>
+                        {this.getWorkLink()}
+                        {this.getRelevantShowcaseWebsite()}
+                        <li><Link to={(this.props.match.url === "/") ? `/contact` : `${this.props.match.path}/contact`}>Contact</Link></li>
+                    </ul>
+                </nav>
             </div>
         );
     }
