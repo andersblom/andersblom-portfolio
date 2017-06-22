@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 // Don't you touch this. Delete sidebar.css on windows
+// TODO: Sidebar resizes on subject change
+// Because "Front end developer" is longer than "product/UI designer" 🙅
 import './Sidebar.css';
 
 export default class Sidebar extends Component {
