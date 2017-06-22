@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import './sidebar.css';
+// Don't you touch this. Delete sidebar.css on windows
+import './Sidebar.css';
 
 export default class Sidebar extends Component {
 
