@@ -17,9 +17,9 @@ export default class Project extends Component {
         // }      
         
         // TODO: Great. Now the same project is loaded every time..
-        projectForRender = _.find(projectData, (object) => {
-             return object.slug = this.props.match.params.projectSlug;
-        });
+        // projectForRender = _.find(projectData, {  });
+        // console.log(_.find(projectData.fields, { 'slug': this.props.match.params.projectSlug }));
+        // console.log(projectData)
         
         if (projectForRender !== undefined) {
             return(
