@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import marked from 'marked';
+const _ = require("lodash");
 
 export default class Project extends Component {
     render() {
         let projectData =  this.props.projects;
         let projectForRender;
 
-        //TODO: This isn't very good performance wise. Checkout if Lodash has an alternative: https://lodash.com/
-        for (let i = 0; i < projectData.length; i++) {
-            if (this.props.match.params.projectSlug === projectData[i].fields.slug) {
-                projectForRender = projectData[i];
-                break;
-            }
-        }      
+        // old code. bad performance.
+        // for (let i = 0; i < projectData.length; i++) {
+        //     if (this.props.match.params.projectSlug === projectData[i].fields.slug) {
+        //         projectForRender = projectData[i];
+        //         break;
+        //     }
+        // }      
+        
+        // TODO: Great. Now the same project is loaded every time..
+        projectForRender = _.find(projectData, (object) => {
+             return object.slug = this.props.match.params.projectSlug;
+        });
         
         if (projectForRender !== undefined) {
             return(
