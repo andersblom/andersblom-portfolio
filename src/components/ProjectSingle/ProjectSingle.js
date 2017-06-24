@@ -9,12 +9,12 @@ export default class Project extends Component {
         let projectForRender;
 
         // old code. bad performance.
-        // for (let i = 0; i < projectData.length; i++) {
-        //     if (this.props.match.params.projectSlug === projectData[i].fields.slug) {
-        //         projectForRender = projectData[i];
-        //         break;
-        //     }
-        // }      
+        for (let i = 0; i < projectData.length; i++) {
+            if (this.props.match.params.projectSlug === projectData[i].fields.slug) {
+                projectForRender = projectData[i];
+                break;
+            }
+        }      
         
         // TODO: Great. Now the same project is loaded every time..
         // projectForRender = _.find(projectData, {  });
