@@ -6,6 +6,8 @@ export default class Project extends Component {
     render() {
         let projectData =  this.props.projects;
         let projectForRender;
+
+        //TODO: This isn't very good performance wise. Checkout if Lodash has an alternative: https://lodash.com/
         for (let i = 0; i < projectData.length; i++) {
             if (this.props.match.params.projectSlug === projectData[i].fields.slug) {
                 projectForRender = projectData[i];
