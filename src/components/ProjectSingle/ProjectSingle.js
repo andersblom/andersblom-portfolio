@@ -1,25 +1,15 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import marked from 'marked';
-const _ = require("lodash");
+import find from 'lodash/find';
 
 export default class Project extends Component {
     render() {
-        let projectData =  this.props.projects;
-        let projectForRender;
+        let projectData =  this.props.projects; 
 
-        // old code. bad performance.
-        for (let i = 0; i < projectData.length; i++) {
-            if (this.props.match.params.projectSlug === projectData[i].fields.slug) {
-                projectForRender = projectData[i];
-                break;
-            }
-        }      
-        
-        // TODO: Great. Now the same project is loaded every time..
-        // projectForRender = _.find(projectData, {  });
-        // console.log(_.find(projectData.fields, { 'slug': this.props.match.params.projectSlug }));
-        // console.log(projectData)
+        let projectForRender = find(projectData, a => {
+            return a.fields.slug === this.props.match.params.projectSlug;
+        });
         
         if (projectForRender !== undefined) {
             return(

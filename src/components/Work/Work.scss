@@ -1,0 +1,12 @@
+@import '../../global/global.scss';
+
+.projectEntryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .projectEntry {
+        width: 50%;
+    }
+}
+
