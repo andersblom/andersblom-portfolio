@@ -22,9 +22,11 @@ export default class Welcome extends Component {
                     // Import result is the URL of your image
                     return <img src={logo} alt="Logo" />;
                     }*/}
+
+                    {/*TODO: Weather darksky stuff */}
                     <div className="welcome-img"><img src="http://placehold.it/400x500" alt="Anders" /></div>
-                    <h1>Hi there! I'm Anders.<br />
-                        Product Designer and Front-end Developer from Denmark.
+                    <h1>Hi there! I'm Anders. 👋<br />
+                        Product Designer and Front-end Developer from ☀️ Odense, Denmark. 
                     </h1>
                     <h2>What would you like to see?</h2>
                     
