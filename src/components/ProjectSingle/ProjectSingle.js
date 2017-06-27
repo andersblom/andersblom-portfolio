@@ -17,8 +17,10 @@ export default class Project extends Component {
             return(
                 <div className="projectSingle">
                     <Link className="backBtn" to={`/${this.props.category}`}>X</Link>
-                    <div className="projectTitle">{projectForRender.fields.title}</div>
-                    <div className="hero-img" style={{ backgroundImage: `url(${projectForRender.fields.heroimage.fields.file.url})`, "backgroundSize": "cover", "height": "200px" }}></div>
+                    <div className="heroImgContainer">
+                        <div className="hero-img" style={{ backgroundImage: `url(${projectForRender.fields.heroimage.fields.file.url})`}}></div>
+                        <div className="projectTitle">{projectForRender.fields.title}</div>
+                    </div>
                     <div className="content" dangerouslySetInnerHTML={{__html: marked(projectForRender.fields.content)}}></div>
                     <Link to={`/${this.props.category}`}>Back to projects</Link>
                 </div>
