@@ -22,7 +22,7 @@ export default class Project extends Component {
                         <div className="projectTitle">{projectForRender.fields.title}</div>
                     </div>
                     <div className="content" dangerouslySetInnerHTML={{__html: marked(projectForRender.fields.content)}}></div>
-                    <Link to={`/${this.props.category}`}>Back to projects</Link>
+                    <Link className="backBtnBottom" to={`/${this.props.category}`}>Back to projects</Link>
                 </div>
             );
         } else {
