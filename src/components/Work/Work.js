@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+// TODO: RTFM: https://github.com/reactjs/react-transition-group
 
 import './Work.css';
 
