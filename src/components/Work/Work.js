@@ -23,7 +23,7 @@ export default class Work extends Component {
         var projectNodes = this.props.projects.map((value) => {
             if (value.fields.category === this.props.category || value.fields.category === "both") {
                 return(
-                    <div className="projectEntry" onClick={() => this.props.history.push(`${this.props.match.url}/project/${value.fields.slug}`)} 
+                    <div className={"projectEntry " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")} onClick={() => this.props.history.push(`${this.props.match.url}/project/${value.fields.slug}`)} 
                         style={{backgroundImage: `url(${value.fields.heroimage.fields.file.url})`, cursor: 'pointer'}} 
                         to={`${this.props.match.url}/project/${value.fields.slug}`} 
                         key={value.sys.id}>

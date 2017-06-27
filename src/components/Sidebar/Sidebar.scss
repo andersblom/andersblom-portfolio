@@ -99,3 +99,10 @@
         color: $code-text;
     }
 }
+
+.stateNav i {
+    transition: 150ms color ease-in-out;
+    &:hover {
+        color: $primary;
+    }
+}

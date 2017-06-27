@@ -12,7 +12,6 @@ import Contact from './components/Contact/Contact';
 import Sidebar from './components/Sidebar/Sidebar';
 
 // TODO: favicon!!1
-// TODO: Split components into folders w/css for modularizing the CSS along with components
 ReactDOM.render((
     <App>
       <Router>

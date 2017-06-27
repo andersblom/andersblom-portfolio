@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import marked from 'marked';
 import find from 'lodash/find';
 
+import './ProjectSingle.css';
+
 export default class Project extends Component {
     render() {
         let projectData =  this.props.projects; 
@@ -13,9 +15,9 @@ export default class Project extends Component {
         
         if (projectForRender !== undefined) {
             return(
-                <div>
-                    <Link to={`/${this.props.category}`}>X</Link>
-                    <div className="title">{projectForRender.fields.title}</div>
+                <div className="projectSingle">
+                    <Link className="backBtn" to={`/${this.props.category}`}>X</Link>
+                    <div className="projectTitle">{projectForRender.fields.title}</div>
                     <div className="hero-img" style={{ backgroundImage: `url(${projectForRender.fields.heroimage.fields.file.url})`, "backgroundSize": "cover", "height": "200px" }}></div>
                     <div className="content" dangerouslySetInnerHTML={{__html: marked(projectForRender.fields.content)}}></div>
                     <Link to={`/${this.props.category}`}>Back to projects</Link>

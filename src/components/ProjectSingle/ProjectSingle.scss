@@ -1,0 +1,25 @@
+@import '../../global/global.scss';
+
+.projectSingle {
+    position: relative;
+    z-index: 0;
+}
+
+.backBtn {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    z-index: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 30px;
+    color: $black;
+    @extend %font-stack-main;
+}
+
+.projectTitle {
+    text-align: center;
+    @extend %font-stack-main;
+    font-weight: 400;
+    font-size: 32px;
+}
