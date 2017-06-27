@@ -17,6 +17,9 @@ JSON output of everything:
 https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6dd5408e34a23b067f57642ca699179a369cd8a8ae5910cf37903
 */
 
+// TODO:    Content output is probably still suffering from some old stuff.
+//          Should probably look at this
+
 export default class Work extends Component {
     render() {
         console.log(this.props.projects[0]);
@@ -24,7 +27,7 @@ export default class Work extends Component {
             if (value.fields.category === this.props.category || value.fields.category === "both") {
                 return(
                     <div className={"projectEntry " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")} onClick={() => this.props.history.push(`${this.props.match.url}/project/${value.fields.slug}`)} 
-                        style={{backgroundImage: `url(${value.fields.heroimage.fields.file.url})`, cursor: 'pointer'}} 
+                        style={{backgroundImage: `url(${value.fields.overviewImage.fields.file.url})`, cursor: 'pointer'}} 
                         to={`${this.props.match.url}/project/${value.fields.slug}`} 
                         key={value.sys.id}>
                         <div className="info">
