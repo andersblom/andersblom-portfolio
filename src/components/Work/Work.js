@@ -27,8 +27,8 @@ export default class Work extends Component {
                         to={`${this.props.match.url}/project/${value.fields.slug}`} 
                         key={value.sys.id}>
                         <div className="info">
-                            <div>{value.fields.myRole}</div>
-                            <div>{value.fields.title}</div>
+                            <div className="role">{value.fields.myRole}</div>
+                            <div className="title">{value.fields.title}</div>
                         </div>
                     </div>
                 );
