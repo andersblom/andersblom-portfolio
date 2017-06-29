@@ -7,6 +7,8 @@
     justify-content: center;
     align-items: center;
     padding: 20px 40px 20px 40px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .profilePic {
@@ -23,20 +25,24 @@ h1 {
     font-size: 20px;
 }
 
+.about, .no-worries {
+    text-align: center;
+    @extend %font-stack-main;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6em;
+    color: $black;
+}
+
 h2 {
     text-align: center;
     @extend %font-stack-main;
     font-weight: 500;
     font-size: 18px;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.4em;
+    margin-top: 1.4em;
 }
 
-.no-worries {
-    text-align: center;
-    @extend %font-stack-main;
-    font-weight: 400;
-    font-size: 14px;
-}
 
 .welcome-icon-wrapper {
     display: flex;

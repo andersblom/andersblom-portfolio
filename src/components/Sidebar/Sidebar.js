@@ -32,11 +32,10 @@ export default class Sidebar extends Component {
         if (this.props.category === "code") {
             return "Front-end Developer"
         } else if (this.props.category === "design") {
-            return "Product/UI Designer"
+            return "Web/UI Designer"
         } else {
             return "Designer & Developer"
         }
-        // Designer & Developer
     }
 
     render() {
@@ -52,12 +51,6 @@ export default class Sidebar extends Component {
                         {this.getTitle()}
                     </div>
                 </div>
-                {/*<nav>
-                    <ul>
-                        <li><Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}>Design</Link></li>
-                        <li><Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}>Code</Link></li>
-                    </ul>
-                </nav>*/}
                 
                 <nav>
                     <ul>
