@@ -17,6 +17,8 @@ body, html, #root, .App {
     flex-wrap: wrap;
     flex-direction: row;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
     @include mq(xs) {
         flex-direction: column;
     }
@@ -25,7 +27,7 @@ body, html, #root, .App {
 .contentArea {
     flex: 8;
     // height: 100%; - this doesnt really make sense right now.
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
