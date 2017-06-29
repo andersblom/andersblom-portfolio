@@ -1,0 +1,70 @@
+@import '../../global/global.scss';
+
+.welcome {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px 20px 40px;
+}
+
+.profilePic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 2em;
+}
+
+h1 {
+    text-align: center;
+    @extend %font-stack-main;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+h2 {
+    text-align: center;
+    @extend %font-stack-main;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 0.2em;
+}
+
+.no-worries {
+    text-align: center;
+    @extend %font-stack-main;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.welcome-icon-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 200px;
+    margin-top: 2em;
+
+    a {
+        text-decoration: none;
+        padding: 20px 20px 20px 20px;
+        background-color: $white;
+        color: $design_faded;
+        border-radius: 3px;
+        transition: 300ms background-color ease-in-out;
+
+        &:hover {
+            background-color: $design;
+        }
+    }
+
+    .designIcon, .codeIcon {
+        text-align: center;
+        
+        i {
+            color: $primary;
+            margin-bottom: 1em;
+        }
+    }   
+}
