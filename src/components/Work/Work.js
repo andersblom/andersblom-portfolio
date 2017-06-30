@@ -20,6 +20,8 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 // TODO:    Content output is probably still suffering from some old stuff.
 //          Should probably look at this
 
+// TODO: Hover @ project: Hvidt curtain "falder ned", tekst flyvfader ind fra siden. Ease-in-out-quad (lidt mere slow-hurtig-slow curve)
+
 export default class Work extends Component {
     render() {
         console.log(this.props.projects[0]);
