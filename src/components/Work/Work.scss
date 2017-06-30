@@ -10,7 +10,11 @@
         width: 50%;
         height: 48vh;
         background-size: cover;
-        background-position: center center;      
+        background-position: center center;   
+
+        @include mq(xs) {
+            width: 100%;
+        }   
         
     .info {
         opacity: 0;

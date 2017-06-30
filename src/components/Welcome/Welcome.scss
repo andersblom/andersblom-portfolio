@@ -2,7 +2,7 @@
 
 .welcome {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -16,6 +16,10 @@
     height: 300px;
     border-radius: 50%;
     margin-bottom: 2em;
+
+    @include mq(xs) {
+        display: none;
+    }
 }
 
 h1 {
