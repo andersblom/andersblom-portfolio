@@ -18,7 +18,7 @@ export default class Sidebar extends Component {
     // Get Dribbble or Github profile according to category
     getRelevantShowcaseWebsite() {
         if (this.props.match.url === "/design") {
-            return (<li><Link target="_blank" to="http://www.dribbble.com/andersblom">Dribbble</Link></li>);
+            return (<li><Link target="_blank" to="http://andersblom.dribbble.com/">Dribbble</Link></li>);
         } else if (this.props.match.url === "/code") {
             return (<li><Link target="_blank" to="https://github.com/andersblom">Github</Link></li>);
         }
