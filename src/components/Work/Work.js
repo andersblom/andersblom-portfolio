@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // TODO: RTFM: https://github.com/reactjs/react-transition-group
@@ -43,6 +44,10 @@ export default class Work extends Component {
             
         );
         
-        return <div className="projectEntryContainer">{projectNodes}</div>
+        return (
+            <ReactCSSTransitionGroup component="div" transitionName="fadeIn" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}>
+                <div className="projectEntryContainer">{projectNodes}</div>
+            </ReactCSSTransitionGroup>
+        );
     }
 }
