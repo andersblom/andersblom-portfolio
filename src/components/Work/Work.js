@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // TODO: RTFM: https://github.com/reactjs/react-transition-group
 
 import './Work.css';
-
-const contentful = require('contentful')
-const client = contentful.createClient({
-  space: 'eeluqlgcpzl3',
-  accessToken: '255fc48deab6dd5408e34a23b067f57642ca699179a369cd8a8ae5910cf37903'
-});
 
 /* 
 JSON output of everything:
@@ -39,6 +32,8 @@ export default class Work extends Component {
                         </div>
                     </div>
                 );
+            } else {
+                return (<div>Oops! I did a bad getting the projects. Please try again.</div>)
             }
         }
             

@@ -20,7 +20,7 @@ export default class Welcome extends Component {
                 <Sidebar match={this.props.match} />
                 <div className="contentArea welcome">
                     <ReactCSSTransitionGroup component="div" className="welcome-img" transitionName="fadeIn-delayed" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}><img className="profilePic" src={profilePic} alt="Anders" /></ReactCSSTransitionGroup>
-                        <ReactCSSTransitionGroup transitionName="slideIn" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}><h1>Hi there! I'm Anders. 👋</h1></ReactCSSTransitionGroup>
+                        <ReactCSSTransitionGroup transitionName="slideIn" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}><h1>Hi there! I'm Anders. <span role="img" aria-label="Emoji">👋</span></h1></ReactCSSTransitionGroup>
                     
                     <ReactCSSTransitionGroup component="div" className="welcome-content-wrapper" transitionName="fadeIn-delayed" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}>
                     <span className="about">
