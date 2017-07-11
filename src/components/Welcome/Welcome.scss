@@ -38,6 +38,10 @@ h1 {
     color: $black;
 }
 
+.welcome-content-wrapper {
+    text-align: center;
+}
+
 h2 {
     text-align: center;
     @extend %font-stack-main;
@@ -55,6 +59,7 @@ h2 {
     justify-content: space-around;
     width: 200px;
     margin-top: 2em;
+    margin: 0 auto;
 
     a {
         text-decoration: none;
@@ -71,10 +76,39 @@ h2 {
 
     .designIcon, .codeIcon {
         text-align: center;
+        margin-top: 0.4em;
         
         i {
             color: $primary;
             margin-bottom: 1em;
         }
+
+        .iconExplainer {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: $code-faded;
+            text-transform: uppercase;
+
+        }
     }   
+}
+
+// Animations
+
+.slideIn-appear {
+    transition: 300ms opacity 300ms ease-in-out, 300ms transform 300ms ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+.slideIn-appear-active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.fadeIn-delayed-appear {
+    transition: 300ms opacity 1300ms ease-in-out;
+    opacity: 0;
+}
+.fadeIn-delayed-appear-active {
+    opacity: 1;
 }
