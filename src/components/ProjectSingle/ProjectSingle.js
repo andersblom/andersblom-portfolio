@@ -18,11 +18,12 @@ export default class Project extends Component {
             return(
                 <div className="projectSingle">
                     <Link className="backBtn" to={`/${this.props.category}`}>X</Link>
-                    {/*TODO: This transition is uggles. Try growing down and then fading in the title*/}
                     <ReactCSSTransitionGroup component="div" transitionName="growIn" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={true} transitionEnterTimeout={500} transitionLeave={false}>
                     <div className="heroImgContainer">
                         <div className="hero-img" style={{ backgroundImage: `url(${projectForRender.fields.heroimage.fields.file.url})`}}></div>
-                        <div className="projectTitle">{projectForRender.fields.title}</div>
+                        <ReactCSSTransitionGroup transitionName="fadeIn" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={true} transitionEnterTimeout={500} transitionLeave={false}>
+                            <div className="projectTitle">{projectForRender.fields.title}</div>
+                        </ReactCSSTransitionGroup>
                     </div>
                     </ReactCSSTransitionGroup>
                     <ReactCSSTransitionGroup component="div" transitionName="fadeIn" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}>
