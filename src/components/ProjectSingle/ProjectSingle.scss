@@ -50,6 +50,23 @@
         z-index: 0;
     }
 
+    //Animations
+    .growIn-appear {
+        transition: 500ms height 300ms ease-in-out;
+        height: 0;
+    }
+    .growIn-appear-active {
+        height: 50vh;
+    }
+
+    .fadeIn-appear {
+        transition: 500ms opacity 750ms ease-in-out;
+        opacity: 0;
+    }
+    .fadeIn-appear-active {
+        opacity: 1;
+    }
+
     .projectTitle {
         text-align: center;
         @extend %font-stack-main;
@@ -104,7 +121,7 @@
         display: block;
         width: 100%;
         height: auto;
-        margin: 2em 0 2em 0;
+        margin: 4em 0 4em 0;
     }
 
     a {
@@ -112,7 +129,19 @@
         text-decoration: none;
     }
 
+    .btnHolder {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+        margin-bottom: 4em;
+    }
+
     a.backBtnBottom, a.backBtn {
-        color: $white
+        color: $white;
     }
 }
+

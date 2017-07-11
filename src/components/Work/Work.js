@@ -22,8 +22,6 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 
 // TODO: Hover @ project: Hvidt curtain "falder ned", tekst flyvfader ind fra siden. Ease-in-out-quad (lidt mere slow-hurtig-slow curve)
 
-// TODO: Lazyload stuff: https://github.com/jasonslyvia/react-lazyload - både portfolio oversigt men også portfolio indhold (hvis ikke det bliver animeret ind).
-
 export default class Work extends Component {
     render() {
         console.log(this.props.projects[0]);
