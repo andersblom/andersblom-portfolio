@@ -16,6 +16,8 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 
 // TODO: Hover @ project: Hvidt curtain "falder ned", tekst flyvfader ind fra siden. Ease-in-out-quad (lidt mere slow-hurtig-slow curve)
 
+// TODO: This entry animation is not too bad... http://lasse-e.dk/index.html
+
 export default class Work extends Component {
     render() {
         console.log(this.props.projects[0]);
