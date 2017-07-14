@@ -24,7 +24,7 @@ export default class Welcome extends Component {
                     
                     <ReactCSSTransitionGroup component="div" className="welcome-content-wrapper" transitionName="fadeIn-delayed" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}>
                     <span className="about">
-                        Designer who codes. From Denmark. I've been at it since back when "optimized for IE in 800x600" was okay.
+                        Designer who codes. From Denmark. I've been at it since back when "optimized for IE in 800x600" was not an internet-crime.
                         Today, whether I'm pixel-pushing UI, neck-deep in JavaScript-hacking, or brainstorming ideas with a team, I still love what I do.
                     </span>
                     
