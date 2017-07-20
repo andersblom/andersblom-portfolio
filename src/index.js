@@ -23,9 +23,7 @@ ReactDOM.render((
             <Route path="/code" render={(props) => (
                 <Category {...props} category="code"/>
             )} /> />
-            {/*TODO: Contact doesnt have the container class around the sidebar + contact component. 
-            Might have to move the whole welcome section to a Neutral.js component to wrap this properly.*/}
-            <Route path="/contact" render={(props) => (<div><Sidebar {...props} /><Contact /></div>)} />
+            <Route path="/contact" render={(props) => (<div className="container"><Sidebar {...props} /><div className="contentArea"><Contact /></div></div>)} />
             <Route component={NotFound} />
         </Switch>
       </Router>
