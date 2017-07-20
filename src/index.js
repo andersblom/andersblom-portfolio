@@ -11,7 +11,6 @@ import NotFound from './components/NotFound/NotFound';
 import Contact from './components/Contact/Contact';
 import Sidebar from './components/Sidebar/Sidebar';
 
-// TODO: favicon!!1
 ReactDOM.render((
     <App>
       <Router>

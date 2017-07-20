@@ -8,10 +8,6 @@ import './Welcome.css';
 
 import profilePic from './anders_profile.jpg';
 
-// TODO: Welcome could draw inspiration from:
-// https://dribbble.com/shots/3557349-Personal-Website-2017/attachments/791599
-
-// TODO: Should add something about "If you want to see more stuff, I'm throwing a few shots over at _Dribbble_ or committing projects to _Github_"
 export default class Welcome extends Component {
     
     render() {
