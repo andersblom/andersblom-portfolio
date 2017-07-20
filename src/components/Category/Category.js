@@ -48,7 +48,7 @@ export default class Category extends Component {
                     <Route path={`${this.props.match.url}/contact/`} component={Contact} />
                     <Route path={`${this.props.match.url}/project/:projectSlug`} render={(props) => (
                         <ProjectSingle {...props} projects={this.state.projects} category={this.state.category}/>
-                    )} />
+                    )} />  
                 </div>
             </div>
         );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import _ from 'lodash';
 
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // TODO: RTFM: https://github.com/reactjs/react-transition-group
@@ -19,32 +20,31 @@ https://cdn.contentful.com/spaces/eeluqlgcpzl3/entries?access_token=255fc48deab6
 // TODO: This entry animation is not too bad... http://lasse-e.dk/index.html
 
 export default class Work extends Component {
-    render() {
-        console.log(this.props.projects[0]);
-        var projectNodes = this.props.projects.map((value) => {
-            if (value.fields.category === this.props.category || value.fields.category === "both") {
+    findProjects() {
+        const projectsToBeRendered = _.filter(this.props.projects, o => {
+            return o.fields.category === this.props.category || o.fields.category === "both"
+        });
+
+        return (
+            _.map(projectsToBeRendered, item => {
                 return(
-                    <div className={"projectEntry " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")} onClick={() => this.props.history.push(`${this.props.match.url}/project/${value.fields.slug}`)} 
-                        style={{backgroundImage: `url(${value.fields.overviewImage.fields.file.url})`, cursor: 'pointer'}} 
-                        to={`${this.props.match.url}/project/${value.fields.slug}`} 
-                        key={value.sys.id}>
+                    <div className={"projectEntry " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")} onClick={() => this.props.history.push(`${this.props.match.url}/project/${item.fields.slug}`)} 
+                        style={{backgroundImage: `url(${item.fields.overviewImage.fields.file.url})`, cursor: 'pointer'}} 
+                        to={`${this.props.match.url}/project/${item.fields.slug}`} 
+                        key={item.sys.id}>
                         <div className="info">
-                            <div className="role">{value.fields.myRole}</div>
-                            <div className="title">{value.fields.title}</div>
+                            <div className="role">{item.fields.myRole}</div>
+                            <div className="title">{item.fields.title}</div>
                         </div>
                     </div>
                 );
-            } else {
-                return (<div>Oops! I did a bad getting the projects. Please try again.</div>)
-            }
-        }
-            
-        );
-        
-        return (
-            <ReactCSSTransitionGroup component="div" transitionName="fadeIn" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}>
-                <div className="projectEntryContainer">{projectNodes}</div>
-            </ReactCSSTransitionGroup>
-        );
+            })
+        )
+    }
+
+    render() {
+        return(
+            <div className="projectContainer">{this.findProjects()}</div>
+        )
     }
 }
