@@ -19,7 +19,6 @@ export default class Work extends Component {
                 return(
                     <div className={"projectEntry " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")} onClick={() => this.props.history.push(`${this.props.match.url}/project/${item.fields.slug}`)} 
                         style={{backgroundImage: `url(${item.fields.overviewImage.fields.file.url})`, cursor: 'pointer'}} 
-                        to={`${this.props.match.url}/project/${item.fields.slug}`} 
                         key={item.sys.id}>
                         <div className="info">
                             <div className="role">{item.fields.myRole}</div>
