@@ -33,6 +33,8 @@ export default class Welcome extends Component {
                                 <Link className="designIcon" to="/design"><i className="fa fa-diamond" aria-hidden="true"></i><div className="iconExplainer">Design</div></Link>
                                 <Link className="codeIcon" to="/code"><i className="fa fa-code" aria-hidden="true"></i><div className="iconExplainer">Code</div></Link>
                             </div>
+
+                            
                             </ReactCSSTransitionGroup>
                         </div>
                     </div>

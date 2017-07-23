@@ -1,0 +1,13 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contactContent {
+    max-width: 600px;
+
+    text-align: center;
+}
