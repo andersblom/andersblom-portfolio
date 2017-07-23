@@ -1,3 +1,5 @@
+@import '../../global/global.scss';
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -8,6 +10,27 @@
 
 .contactContent {
     max-width: 600px;
-
     text-align: center;
+
+    h1 {
+        @extend %font-stack-main;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 1em;
+        color: $black;
+    }
+
+    p {
+        @extend %font-stack-main;
+        font-size: 14px;
+        line-height: 1.6em;
+        color: $black;
+        font-weight: 100;
+    }
+
+    a {
+        color: $black;
+        font-weight: 500;
+        text-decoration: none;
+    }
 }
