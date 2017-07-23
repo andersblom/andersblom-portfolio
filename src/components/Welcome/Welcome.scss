@@ -1,14 +1,21 @@
 @import '../../global/global.scss';
 
 .welcome {
+    height: 100%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 40px 20px 40px;
-    max-width: 600px;
+    
     margin: 0 auto;
+}
+
+.welcomeContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
 }
 
 .profilePic {
