@@ -34,7 +34,7 @@ export default class Welcome extends Component {
                                 <Link className="codeIcon" to="/code"><i className="fa fa-code" aria-hidden="true"></i><div className="iconExplainer">Code</div></Link>
                             </div>
 
-                            <div className="extraProjectsTeaser">If you want to see more things from me, I'm throwing a few shots over at <a target="_blank" href="http://andersblom.dribbble.com/">Dribbble</a> or committing to projects at <a target="_blank" href="https://github.com/andersblom">Github</a></div>
+                            <div className="extraProjectsTeaser">If you want to see more things from me, I'm throwing a few shots over at <a target="_blank" rel="noopener noreferrer" href="http://andersblom.dribbble.com/">Dribbble</a> or committing to projects at <a target="_blank" rel="noopener noreferrer" href="https://github.com/andersblom">Github</a></div>
                             </ReactCSSTransitionGroup>
                         </div>
                     </div>
