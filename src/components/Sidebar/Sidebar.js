@@ -29,7 +29,7 @@ export default class Sidebar extends Component {
         if (this.props.category === "code") {
             return "Front-end Developer"
         } else if (this.props.category === "design") {
-            return "Web/UI Designer"
+            return "Product Designer"
         } else {
             return "Designer & Developer"
         }
