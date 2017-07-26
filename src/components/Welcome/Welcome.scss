@@ -23,6 +23,7 @@
     height: 300px;
     border-radius: 50%;
     margin-bottom: 2em;
+    margin-top: 20px;
 
     @include mq(xs) {
         display: none;
@@ -106,6 +107,7 @@ h2 {
     line-height: 1.6em;
     color: $design-faded;
     margin-top: 0.4em;
+    margin-bottom: 30px;
 
     font-weight: 300;
 
