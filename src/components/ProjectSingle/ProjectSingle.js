@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import marked from 'marked';
@@ -6,7 +7,11 @@ import find from 'lodash/find';
 
 import './ProjectSingle.css';
 
-export default class Project extends Component {
+export default class ProjectSingle extends Component {
+    componentDidMount() {
+        ReactDOM.findDOMNode(this).scrollIntoView();
+    }
+    
     render() {
         let projectData =  this.props.projects; 
 
