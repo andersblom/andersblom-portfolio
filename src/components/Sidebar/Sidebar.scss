@@ -5,6 +5,30 @@
     flex: 1 200px;
     @extend %font-stack-main;
 
+    @include mq(xs) {
+        padding: 40px 20px 0 40px;
+
+        ul {
+            display: none;
+        }
+        .stateNav {
+            float: right;
+            margin-top: 10px;
+
+            i {
+                font-size: 20px;
+                margin-bottom: 0px; 
+                margin-left: 20px;
+                margin-right: 0;
+
+                &:first-of-type {
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
     ul {
         margin-left: 0px;
         padding-left: 0px;
