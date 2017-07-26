@@ -16,6 +16,9 @@
     align-items: center;
     flex-direction: column;
     max-width: 600px;
+    @include mq(xs) {
+        max-width: 90%;
+    }
 }
 
 .profilePic {
