@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
+import WorkListItem from './WorkListItem/WorkListItem';
+
 import './Work.css';
 
 /* 
@@ -17,14 +19,7 @@ export default class Work extends Component {
         return (
             _.map(projectsToBeRendered, item => {
                 return(
-                    <div className={"projectEntry " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "")} onClick={() => this.props.history.push(`${this.props.match.url}/project/${item.fields.slug}`)} 
-                        style={{backgroundImage: `url(${item.fields.overviewImage.fields.file.url})`, cursor: 'pointer'}} 
-                        key={item.sys.id}>
-                        <div className="info">
-                            <div className="role">{item.fields.myRole}</div>
-                            <div className="title">{item.fields.title}</div>
-                        </div>
-                    </div>
+                    <WorkListItem category={this.props.category} match={this.props.match} project={item} key={item.sys.id} />
                 );
             })
         )
