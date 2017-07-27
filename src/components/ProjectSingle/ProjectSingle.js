@@ -33,7 +33,7 @@ export default class ProjectSingle extends Component {
                     </ReactCSSTransitionGroup>
                     <ReactCSSTransitionGroup component="div" transitionName="fadeIn" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}>
                     <div className="content" dangerouslySetInnerHTML={{__html: marked(projectForRender.fields.content)}}></div>
-                    <div className="btnHolder"><Link className="backBtnBottom" to={`/${this.props.category}`}>Back to projects</Link></div>
+                    <div className="btnHolder"><Link className="backBtnBottom hover" to={`/${this.props.category}`}>Back to projects</Link></div>
                     </ReactCSSTransitionGroup>
                 </div>
             );

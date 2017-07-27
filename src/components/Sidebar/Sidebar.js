@@ -41,6 +41,7 @@ export default class Sidebar extends Component {
                 <div className="stateNav">
                     <Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}><i className="fa fa-diamond" aria-hidden="true"></i></Link>
                     <Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}><i className="fa fa-code" aria-hidden="true"></i></Link>
+                    <Link to="/contact" className="contact-mobile"><i className="fa fa-phone" aria-hidden="true"></i></Link>
                 </div>
                 <div className="logo">
                     <Link to="/" className="name" onClick={ this.changeCategoryHandler.bind(this, "both")}>Anders Blom</Link>
