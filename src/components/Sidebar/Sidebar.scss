@@ -81,8 +81,10 @@
         .active {
             color: $primary;
         }
-        .fa-code {
-            font-size: 18px;
+        a {
+            .fa-code {
+                font-size: 22px;
+            }
         }
     }
 
