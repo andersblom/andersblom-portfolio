@@ -36,9 +36,10 @@
                     margin-left: 0;
                 }
             }
-
-            .fa-code {
-                font-size: 23px;
+            a {
+                .fa-code {
+                    font-size: 21px !important;
+                }
             }
         }
         .logo {
@@ -83,7 +84,7 @@
         }
         a {
             .fa-code {
-                font-size: 22px;
+                font-size: 18px;
             }
         }
     }
