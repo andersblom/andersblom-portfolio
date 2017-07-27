@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './Contact.css';
 
-import contactIllustration from './contact-illu.svg';
+import contactIllustration from './contact-illu.png';
 
 export default class Contact extends Component {
     render() {
