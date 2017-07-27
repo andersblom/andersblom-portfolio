@@ -10,7 +10,11 @@
         width: 50%;
         height: 50vh;
         background-size: cover;
-        background-position: center center;   
+        background-position: center center; 
+        
+        @include mq(sm) {
+            width: 100%;
+        }
 
         @include mq(xs) {
             width: 100%;
