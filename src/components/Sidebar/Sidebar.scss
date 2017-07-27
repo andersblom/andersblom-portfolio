@@ -5,8 +5,19 @@
     flex: 1 200px;
     @extend %font-stack-main;
 
+    width: 185px;
+
+    @include mq(md) {
+        width: 160px;
+    }
+
+    @include mq(sm) {
+        width: 160px;
+    }
+
     @include mq(xs) {
-        padding: 0px 0px 0px 20px;
+        width: 100%;
+        padding: 0px;
         height: 80px;
         display: flex;
         flex-direction: row;
@@ -20,6 +31,7 @@
             order: 1;
             float: right;
             margin-top: 0px;
+            margin-right: 5px;
 
             .contact-mobile {
                 display: inline;
@@ -45,6 +57,7 @@
         .logo {
             max-width: 60%;
             order: 0;
+            margin-left: 20px;
         }
     }
 
