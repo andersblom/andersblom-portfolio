@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Sidebar from '../Sidebar/Sidebar';
 import Work from '../Work/Work';
 import Contact from '../Contact/Contact';
 import ProjectSingle from '../ProjectSingle/ProjectSingle';
+import NotFound from '../NotFound/NotFound';
 
 const contentful = require('contentful')
 const client = contentful.createClient({
@@ -34,7 +35,7 @@ export default class Category extends Component {
     changeCategory = (newCat) => {
         this.setState({
             category: newCat
-        })
+        });
     }
 
     render() {
@@ -42,13 +43,16 @@ export default class Category extends Component {
             <div className="container work">
                 <Sidebar match={this.props.match} category={this.state.category} categoryHandler={this.changeCategory} />
                 <div className="contentArea">
+                    <Switch>
                     <Route exact path={`${this.props.match.url}/`} render={(props) => (
                         <Work {...props} projects={this.state.projects} category={this.state.category} />
                     )}/>
                     <Route path={`${this.props.match.url}/contact/`} component={Contact} />
                     <Route path={`${this.props.match.url}/project/:projectSlug`} render={(props) => (
                         <ProjectSingle {...props} projects={this.state.projects} category={this.state.category}/>
-                    )} />  
+                    )} />
+                    <Route component={NotFound} />
+                    </Switch>  
                 </div>
             </div>
         );
