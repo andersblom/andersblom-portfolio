@@ -11,6 +11,9 @@
 .contactContent {
     max-width: 600px;
     text-align: center;
+    @include mq(xs) {
+        max-width: 90%;
+    }
 
     h1 {
         @extend %font-stack-main;
