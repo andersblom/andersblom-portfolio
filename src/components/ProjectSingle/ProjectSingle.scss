@@ -4,7 +4,7 @@
     padding: 16px 30px 14px 30px;
     background-color: $white;
     border-radius: 2px;
-    border-color: $design-faded;
+    border-color: $black;
     border-width: 1px;
     border-style: solid;
     text-align: center;
@@ -18,13 +18,14 @@
     position: relative;
     z-index: 0;
     transition: padding 200ms ease-in-out;
+    //backBtnBottom color is down in line ~75
 
     &::before {
         font-family: FontAwesome, "FontAwesome";
         width: 10px;
         height: 10px;
         content: "\f060";
-        color: rgba($design-faded, 0.92);
+        color: rgba($black, 1);
         position: absolute;
         z-index: 1;
         top: 16px;
@@ -72,7 +73,7 @@
         margin-bottom: 4em;
 
         a {
-            color: $design-faded;
+            color: $black; //backBtnBottom color
         }
     }
 
