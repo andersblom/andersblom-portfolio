@@ -5,6 +5,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import marked from 'marked';
 import find from 'lodash/find';
 import NotFound from '../NotFound/NotFound';
+import Loader from '../Loader/Loader';
 
 import './ProjectSingle.css';
 
@@ -39,7 +40,7 @@ export default class ProjectSingle extends Component {
                 </div>
             );
         } else {
-            return(<NotFound />);
+            return(<Loader />);
         }
     }
 }
