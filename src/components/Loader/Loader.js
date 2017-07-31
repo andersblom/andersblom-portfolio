@@ -14,10 +14,11 @@ export default class Loader extends Component {
     }
 
     componentDidMount() {
-        setTimeout(() => {
+        let loaderTimeout = setTimeout(() => {
             this.setState({timeout: true});
         },3500)
     }
+
     render() {
         if (this.state.timeout === false) {
             return(
