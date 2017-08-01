@@ -66,10 +66,29 @@
         font-size: 13px;
         margin-top: 2em;
         margin-bottom: 1em;
+        position: relative;
+        transition: padding 200ms ease-in-out;
 
-        transition: 200ms opacity 0ms ease-in-out;
+        &::before {
+            font-family: FontAwesome, "FontAwesome";
+            width: 10px;
+            height: 10px;
+            content: "\f060";
+            color: rgba($black, 1);
+            position: absolute;
+            z-index: 1;
+            top: 13px;
+            left: 0;
+            opacity: 0;
+            margin-left: 25px;
+            transition: opacity 200ms ease-in-out;
+        }
+
         &:hover {
-            opacity: 0.6;
+            padding-left: 60px;
+            &::before {
+                opacity: 1;
+            }
         }
     }
 }
