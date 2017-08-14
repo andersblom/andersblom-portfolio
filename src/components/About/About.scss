@@ -1,0 +1,29 @@
+@import '../../global/global.scss';
+
+.aboutSection {
+    text-align: left;
+
+    @extend %font-stack-main;
+    max-width: 700px;
+    padding: 10em 20px 0px 20px;
+    margin: 0 auto;
+
+    //make this one "visible" when fixing fullWidth img class
+    overflow-x: hidden;
+
+    overflow-y: hidden;
+}
+
+.aboutTitle {
+    font-size: 24px;
+    @extend %font-stack-main;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.aboutParagraph {
+    font-size: 16px;
+    line-height: 1.7em;
+    margin-bottom: 1em;
+    color: $design-faded;
+}
