@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import ReactGA from 'react-ga';
+
 import './index.css';
 
 import App from './components/App';
@@ -11,9 +13,16 @@ import NotFound from './components/NotFound/NotFound';
 import Contact from './components/Contact/Contact';
 import Sidebar from './components/Sidebar/Sidebar';
 
+ReactGA.initialize('UA-39173255-1');
+
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname + window.location.search });
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
 ReactDOM.render((
     <App>
-      <Router>
+      <Router onUpdate={logPageView}>
         <Switch>
             <Route exact path="/" component={Welcome} />
             <Route path="/design" render={(props) => (

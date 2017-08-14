@@ -5,19 +5,41 @@
     flex: 1 200px;
     @extend %font-stack-main;
 
-    @include mq(xs) {
-        padding: 40px 20px 0 40px;
+    width: 185px;
 
-        ul {
+    @include mq(md) {
+        width: 160px;
+    }
+
+    @include mq(sm) {
+        width: 160px;
+    }
+
+    @include mq(xs) {
+        width: 100%;
+        padding: 0px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
             display: none;
         }
         .stateNav {
+            order: 1;
             float: right;
-            margin-top: 10px;
+            margin-top: 0px;
+            margin-right: 5px;
+
+            .contact-mobile {
+                display: inline;
+            }
 
             i {
                 font-size: 20px;
-                margin-bottom: 0px; 
+                margin-bottom: 0px !important; 
                 margin-left: 20px;
                 margin-right: 0;
 
@@ -26,6 +48,16 @@
                     margin-left: 0;
                 }
             }
+            a {
+                .fa-code {
+                    font-size: 21px !important;
+                }
+            }
+        }
+        .logo {
+            max-width: 60%;
+            order: 0;
+            margin-left: 20px;
         }
     }
 
@@ -63,7 +95,11 @@
         .active {
             color: $primary;
         }
-
+        a {
+            .fa-code {
+                font-size: 18px;
+            }
+        }
     }
 
     .logo {
@@ -133,4 +169,8 @@
     &:hover {
         color: $primary;
     }
+}
+
+.contact-mobile {
+    display: none;
 }

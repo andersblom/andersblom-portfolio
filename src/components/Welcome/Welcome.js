@@ -31,12 +31,7 @@ export default class Welcome extends Component {
                                 <Link className="designIcon" to="/design"><i className="fa fa-diamond" aria-hidden="true"></i><div className="iconExplainer">Design</div></Link>
                                 <Link className="codeIcon" to="/code"><i className="fa fa-code" aria-hidden="true"></i><div className="iconExplainer">Code</div></Link>
                             </div>
-
-                            <span className="no-worries">Don't worry. You can change your mind at any time.<br />
-                            Just click these icons in the nav-bar on the left!</span>
-                            
-
-                            <div className="extraProjectsTeaser">If you want to see more things from me, I'm throwing a few shots over at <a target="_blank" rel="noopener noreferrer" href="http://andersblom.dribbble.com/">Dribbble</a> or committing to projects at <a target="_blank" rel="noopener noreferrer" href="https://github.com/andersblom">Github</a></div>
+                            <div className="extraProjectsTeaser">If you want to see more things from me, I'm throwing a few shots over at <a target="_blank" rel="noopener noreferrer" href="http://andersblom.dribbble.com/">Dribbble</a> or committing to projects at <a target="_blank" rel="noopener noreferrer" href="https://github.com/andersblom">Github</a>.</div>
                             </ReactCSSTransitionGroup>
                         </div>
                     </div>

@@ -29,7 +29,10 @@
     margin-bottom: 2em;
 
     @include mq(xs) {
-        display: none;
+        margin-top: 0px;
+        width: 180px;
+        height: 180px;
+        margin-bottom: 0.7em;
     }
 }
 
@@ -120,6 +123,10 @@ h2 {
         color: $black;
         font-weight: 500;
         text-decoration: none;
+        transition: 200ms color ease-in-out;
+        &:hover {
+            color: $design-faded;
+        }
     }
 }
 

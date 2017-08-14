@@ -1,0 +1,99 @@
+@import '../../global/global.scss';
+
+.errorPage {
+    height: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(xs) {
+        width: 90%;
+    }
+
+    @extend %font-stack-main
+}
+
+.fourOhFour {
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    margin-left: 10px;
+    margin-bottom: 0.7em;
+    animation: FOF-spin infinite 14s linear;
+
+    @include mq(xs) {
+        font-size: 64px;
+        margin-left: 0;
+    }
+
+    span {
+        margin-left: 0.03em;
+    }
+}
+
+.errorExplanation {
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 1.6em;
+    text-align: center;
+    color: $black;
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $black;
+    }
+}
+
+.linkBackToPage {
+    text-align: center;
+    font-size: 13px;
+    color: $black;
+    font-weight: 100;
+    a {
+        display: block;
+        padding: 10px 30px 10px 30px;
+        border: 1px solid $black;
+        border-radius: 2px;
+        text-decoration: none;
+        color: $black;
+        font-weight: 100;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 13px;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        position: relative;
+        transition: padding 200ms ease-in-out;
+
+        &::before {
+            font-family: FontAwesome, "FontAwesome";
+            width: 10px;
+            height: 10px;
+            content: "\f060";
+            color: rgba($black, 1);
+            position: absolute;
+            z-index: 1;
+            top: 13px;
+            left: 0;
+            opacity: 0;
+            margin-left: 25px;
+            transition: opacity 200ms ease-in-out;
+        }
+
+        &:hover {
+            padding-left: 60px;
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes FOF-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
