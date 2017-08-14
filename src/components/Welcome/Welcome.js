@@ -26,13 +26,15 @@ export default class Welcome extends Component {
                                 Today, whether I'm pixel-pushing UI, neck-deep in JavaScript-hacking, or brainstorming ideas with a team, I still love what I do.
                             </span>
                             
-                            <h2>What would you like to see?</h2>
-                            <span className="no-worries">Don't worry. You can change your mind at any time.<br />
-                            Just click these icons in the nav-bar on the left!</span>
+                            <h2 className="catPicker">What work would you like to see?</h2>
                             <div className="welcome-icon-wrapper">
                                 <Link className="designIcon" to="/design"><i className="fa fa-diamond" aria-hidden="true"></i><div className="iconExplainer">Design</div></Link>
                                 <Link className="codeIcon" to="/code"><i className="fa fa-code" aria-hidden="true"></i><div className="iconExplainer">Code</div></Link>
                             </div>
+
+                            <span className="no-worries">Don't worry. You can change your mind at any time.<br />
+                            Just click these icons in the nav-bar on the left!</span>
+                            
 
                             <div className="extraProjectsTeaser">If you want to see more things from me, I'm throwing a few shots over at <a target="_blank" rel="noopener noreferrer" href="http://andersblom.dribbble.com/">Dribbble</a> or committing to projects at <a target="_blank" rel="noopener noreferrer" href="https://github.com/andersblom">Github</a></div>
                             </ReactCSSTransitionGroup>
