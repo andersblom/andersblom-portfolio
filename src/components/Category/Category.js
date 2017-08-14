@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 import Work from '../Work/Work';
 import Contact from '../Contact/Contact';
+import About from '../About/About';
 import ProjectSingle from '../ProjectSingle/ProjectSingle';
 import NotFound from '../NotFound/NotFound';
 
@@ -47,7 +48,10 @@ export default class Category extends Component {
                     <Route exact path={`${this.props.match.url}/`} render={(props) => (
                         <Work {...props} projects={this.state.projects} category={this.state.category} />
                     )}/>
+                    
+                    <Route path={`${this.props.match.url}/about/`} component={About} />
                     <Route path={`${this.props.match.url}/contact/`} component={Contact} />
+                    
                     <Route path={`${this.props.match.url}/project/:projectSlug`} render={(props) => (
                         <ProjectSingle {...props} projects={this.state.projects} category={this.state.category}/>
                     )} />
