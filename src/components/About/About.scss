@@ -10,14 +10,16 @@
 
     //make this one "visible" when fixing fullWidth img class
     overflow-x: hidden;
-
     overflow-y: hidden;
+
+    h1, h2 {
+        text-align: left;
+    }
 }
 
 .aboutTitle {
     font-size: 24px;
     @extend %font-stack-main;
-    text-align: left;
     margin-bottom: 2em;
 }
 
@@ -26,4 +28,57 @@
     line-height: 1.7em;
     margin-bottom: 1em;
     color: $design-faded;
+}
+
+.aboutHistoryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.aboutHistoryCol {
+    width: 100%;
+    @include mq(lg) {
+        width: 47%;
+    }
+    @include mq(md) {
+        width: 47%;
+    }
+}
+
+.aboutHistoryColHeader {
+    font-size: 18px;
+}
+
+.aboutHistoryColEntry {
+    margin-bottom: 2em;
+    
+    .year {
+        font-weight: 300;
+        margin-right: 10px;
+        font-size: 16px;
+        color: $black;
+        margin-bottom: 0.6em;
+    }
+
+    .title {
+        font-size: 16px;
+        color: $black;
+        font-weight: bold;
+    }
+
+    .location {
+        font-size: 14px;
+        color: $black;
+        font-weight: 500;
+        margin-bottom: 0.8em;
+    }
+
+    .description {
+        font-size: 14px;
+        color: $design-faded;
+        line-height: 1.5em;
+    }
 }
