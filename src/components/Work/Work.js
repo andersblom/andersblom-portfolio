@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import _ from 'lodash';
 
 import WorkListItem from './WorkListItem/WorkListItem';
@@ -27,7 +28,9 @@ export default class Work extends Component {
 
     render() {
         return(
-            <div className="projectContainer">{this.findProjects()}</div>
+            <ReactCSSTransitionGroup component="div" className="projectContainer" transitionName="fadeInUp" transitionAppearTimeout={100} transitionAppear={true} transitionEnter={true} transitionEnterTimeout={1} transitionLeave={false}>
+                {this.findProjects()}
+            </ReactCSSTransitionGroup>
         )
     }
 }

@@ -11,6 +11,7 @@ import Welcome from './components/Welcome/Welcome';
 import Category from './components/Category/Category';
 import NotFound from './components/NotFound/NotFound';
 import Contact from './components/Contact/Contact';
+import About from './components/About/About';
 import Sidebar from './components/Sidebar/Sidebar';
 
 ReactGA.initialize('UA-39173255-1');
@@ -32,6 +33,7 @@ ReactDOM.render((
                 <Category {...props} category="code"/>
             )} /> />
             <Route path="/contact" render={(props) => (<div className="container"><Sidebar {...props} /><div className="contentArea"><Contact /></div></div>)} />
+            <Route path="/about" render={(props) => (<div className="container"><Sidebar {...props} /><div className="contentArea"><About /></div></div>)} />
             <Route component={NotFound} />
         </Switch>
       </Router>

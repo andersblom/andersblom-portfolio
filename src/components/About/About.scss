@@ -1,0 +1,138 @@
+@import '../../global/global.scss';
+
+.aboutSection {
+    text-align: left;
+
+    @extend %font-stack-main;
+    max-width: 700px;
+    padding: 4em 20px 0px 20px;
+    margin: 0 auto;
+
+    //make this one "visible" when fixing fullWidth img class
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    h1, h2 {
+        text-align: left;
+    }
+
+    .profilePicContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+
+        .profilePic {
+            margin-bottom: 1em;
+            transition: 300ms transform ease-in-out, 300ms opacity ease-in-out;
+        }
+    }
+}
+
+.aboutSectionContent {
+    transition: 300ms transform ease-in-out, 300ms opacity ease-in-out;
+}
+
+.fadeInUp-appear {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.aboutTitle {
+    font-size: 24px;
+    @extend %font-stack-main;
+    margin-bottom: 2em;
+}
+
+.aboutParagraph {
+    font-size: 16px;
+    line-height: 1.7em;
+    margin-bottom: 1em;
+    color: $design-faded;
+
+    .highlight {
+        color: $primary;
+        font-weight: 500;
+    }
+}
+
+.aboutHistoryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.aboutHistoryCol {
+    width: 100%;
+    @include mq(lg) {
+        width: 47%;
+    }
+    @include mq(md) {
+        width: 47%;
+    }
+}
+
+.aboutHistoryColHeader {
+    font-size: 18px;
+    margin-bottom: 0.6em;
+}
+
+.aboutHistoryColSubHeader {
+    font-size: 14px;
+    margin-top: -0.2em;
+    font-weight: 400;
+    margin-bottom: 1.2em;
+    line-height: 1.7em;
+    color: $design_faded;
+    
+    a {
+        font-weight: bold;
+        color: $black;
+        text-decoration: none;
+        transition: 200ms opacity ease-in-out;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.aboutHistoryColEntry {
+    margin-bottom: 2em;
+    
+    .year {
+        font-weight: 700;
+        margin-right: 10px;
+        font-size: 16px;
+        color: $code-faded;
+        margin-bottom: 0.2em;
+    }
+
+    .title {
+        font-size: 16px;
+        color: $black;
+        font-weight: 500;
+        margin-bottom: 0.25em;
+    }
+
+    .gray {
+        color: $code-faded;
+    }
+
+    .location {
+        font-size: 13px;
+        color: $black;
+        font-weight: 500;
+        margin-bottom: 0.8em;
+    }
+
+    .description {
+        font-size: 14px;
+        color: $design-faded;
+        line-height: 1.5em;
+        margin-bottom: 0.8em;
+    }
+}

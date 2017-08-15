@@ -42,6 +42,7 @@ export default class Sidebar extends Component {
                     <Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}><i className="fa fa-diamond" aria-hidden="true"></i></Link>
                     <Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}><i className="fa fa-code" aria-hidden="true"></i></Link>
                     <Link to="/contact" className="contact-mobile"><i className="fa fa-phone" aria-hidden="true"></i></Link>
+                    {/* <Link to="/contact" className="about-mobile"><i className="fa fa-user" aria-hidden="true"></i></Link> */}
                 </div>
                 <div className="logo">
                     <Link to="/" className="name" onClick={ this.changeCategoryHandler.bind(this, "both")}>Anders Blom</Link>
@@ -54,7 +55,9 @@ export default class Sidebar extends Component {
                     <ul>
                         {this.getWorkLink()}
                         {this.getRelevantShowcaseWebsite()}
-                        <li><Link to={(this.props.match.url === "/") ? `/contact` : `${this.props.match.path}/contact`}>Contact</Link></li>
+
+                        {/* <li><Link to={(this.props.match.url === "/" || this.props.match.url === "/about" || this.props.match.url === "/contact") ? `/about` : `${this.props.match.path}/about`}>About me</Link></li> */}
+                        <li><Link to={(this.props.match.url === "/" || this.props.match.url === "/about" || this.props.match.url === "/contact") ? `/contact` : `${this.props.match.path}/contact`}>Contact</Link></li>
                     </ul>
                 </nav>
             </div>
