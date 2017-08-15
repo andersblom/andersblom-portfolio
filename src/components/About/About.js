@@ -58,12 +58,15 @@ export default class About extends Component {
           <div className="aboutHistoryCol">
             <h2 className="aboutHistoryColHeader">Skills</h2>
             <div className="aboutHistoryColEntry">
-              <div className="year">2012 - 2014</div>
-              <div className="title">Multimedia Designer</div>
-              <div className="location">@ Nordic Multimedia Academy</div>
-              <div className="description">As a part of the Multimedia Designer Programme you are taught various aspects of what you can do with design. 
-                From advanced design principles, to programming, to the business and communication aspects of what it means to be a designer. 
-                During this time I really got a taste for advanced Front-end web development with JavaScript.</div>
+              <div className="title">Design</div>
+              <div className="description">Wireframing, User stories, Sketch, Adobe Suite, Prototying (Invision), Mobile / Responsive</div>
+              <div className="description">Intermediate - basic with: Principle, Facebook Origami.</div>
+              <div className="description">I also have designer-mentoring experience.</div>
+            </div>
+            <div className="aboutHistoryColEntry">
+              <div className="title">Code</div>
+              <div className="description">HTML, (S)CSS, React, NodeJS/Express, jQuery, JavaScript ES6, Git (GitHub & Bitbucket), Webpack, Wordpress.</div>
+              <div className="description">Intermediate - basic with: AngularJS, Unit testing, Socket.io, PHP, Ubuntu LAMP-stack.</div>
             </div>
           </div>
 
