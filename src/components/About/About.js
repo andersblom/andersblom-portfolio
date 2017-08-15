@@ -65,7 +65,7 @@ export default class About extends Component {
             </div>
             <div className="aboutHistoryColEntry">
               <div className="title">Code</div>
-              <div className="description">HTML, (S)CSS, React, NodeJS/Express, jQuery, JavaScript ES6, Git (GitHub & Bitbucket), Webpack, Wordpress.</div>
+              <div className="description">HTML, (S)CSS, React, NodeJS/Express, jQuery, JavaScript ES6, REST API, Git (GitHub & Bitbucket), Webpack, Wordpress.</div>
               <div className="description">Intermediate - basic with: AngularJS, Unit testing, Socket.io, PHP, Ubuntu LAMP-stack.</div>
             </div>
           </div>
