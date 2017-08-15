@@ -91,7 +91,12 @@
     a {
         font-weight: bold;
         color: $black;
-        text-decoration: underline;
+        text-decoration: none;
+        transition: 200ms opacity ease-in-out;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
 

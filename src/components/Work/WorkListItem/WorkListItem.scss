@@ -15,6 +15,13 @@ a.projectEntry {
     @include mq(xs) {
         width: 100%;
     }   
+    transition: 300ms all 50ms ease-in-out;
+}
+
+.fadeInUp-enter {
+    transition: 300ms all 50ms ease-in-out;
+    transform: translateY(10px);
+    opacity: 0;
 }
 
 .info {

@@ -73,7 +73,7 @@ export default class About extends Component {
               
               <div className="aboutHistoryColEntry">
                 <div className="title">Code</div>
-                <div className="description">HTML, (S)CSS, React, NodeJS/Express, jQuery, JavaScript ES6, REST API, Git (GitHub & Bitbucket), Webpack, Wordpress.</div>
+                <div className="description">HTML, (S)CSS, React, NodeJS/Express, jQuery, JavaScript ES6, REST API's, Git (GitHub & Bitbucket), Webpack, Wordpress.</div>
                 <div className="description">Intermediate - basic with: AngularJS, Unit testing, Socket.io, PHP, Ubuntu LAMP-stack.</div>
               </div>
 
@@ -85,12 +85,12 @@ export default class About extends Component {
               
             </div>
 
-            <div className="aboutHistoryCol">
+            {/* <div className="aboutHistoryCol">
               <h2 className="aboutHistoryColHeader">Resume</h2>
               <div className="aboutHistoryColEntry">
                 <div className="description">You can download my resume here: (BUTTON)</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         </ReactCSSTransitionGroup>
