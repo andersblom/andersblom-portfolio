@@ -5,7 +5,7 @@
 
     @extend %font-stack-main;
     max-width: 700px;
-    padding: 10em 20px 0px 20px;
+    padding: 4em 20px 0px 20px;
     margin: 0 auto;
 
     //make this one "visible" when fixing fullWidth img class
@@ -15,6 +15,28 @@
     h1, h2 {
         text-align: left;
     }
+
+    .profilePicContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+
+        .profilePic {
+            margin-bottom: 1em;
+            transition: 300ms transform ease-in-out, 300ms opacity ease-in-out;
+        }
+    }
+}
+
+.aboutSectionContent {
+    transition: 300ms transform ease-in-out, 300ms opacity ease-in-out;
+}
+
+.fadeInUp-appear {
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .aboutTitle {
@@ -28,6 +50,11 @@
     line-height: 1.7em;
     margin-bottom: 1em;
     color: $design-faded;
+
+    .highlight {
+        color: $primary;
+        font-weight: 500;
+    }
 }
 
 .aboutHistoryContainer {
@@ -35,7 +62,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 2em;
+    margin-top: 3em;
 }
 
 .aboutHistoryCol {
@@ -50,27 +77,48 @@
 
 .aboutHistoryColHeader {
     font-size: 18px;
+    margin-bottom: 0.6em;
+}
+
+.aboutHistoryColSubHeader {
+    font-size: 14px;
+    margin-top: -0.2em;
+    font-weight: 400;
+    margin-bottom: 1.2em;
+    line-height: 1.7em;
+    color: $design_faded;
+    
+    a {
+        font-weight: bold;
+        color: $black;
+        text-decoration: underline;
+    }
 }
 
 .aboutHistoryColEntry {
     margin-bottom: 2em;
     
     .year {
-        font-weight: 300;
+        font-weight: 700;
         margin-right: 10px;
         font-size: 16px;
-        color: $black;
-        margin-bottom: 0.6em;
+        color: $code-faded;
+        margin-bottom: 0.2em;
     }
 
     .title {
         font-size: 16px;
         color: $black;
-        font-weight: bold;
+        font-weight: 500;
+        margin-bottom: 0.25em;
+    }
+
+    .gray {
+        color: $code-faded;
     }
 
     .location {
-        font-size: 14px;
+        font-size: 13px;
         color: $black;
         font-weight: 500;
         margin-bottom: 0.8em;
