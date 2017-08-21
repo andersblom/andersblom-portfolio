@@ -45,6 +45,11 @@
         text-decoration: none;
         font-weight: bold;
         color: $black;
+        transition: 300ms color ease-in-out;
+
+        &:hover {
+            color: $design-faded;
+        }
     }
 }
 
@@ -53,11 +58,9 @@
     font-size: 13px;
     color: $black;
     font-weight: 100;
+    
     a {
         display: block;
-        padding: 10px 30px 10px 30px;
-        border: 1px solid $black;
-        border-radius: 2px;
         text-decoration: none;
         color: $black;
         font-weight: 100;
@@ -67,33 +70,30 @@
         margin-top: 2em;
         margin-bottom: 1em;
         position: relative;
-        transition: padding 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
 
         &::before {
             font-family: FontAwesome, "FontAwesome";
-            width: 10px;
-            height: 10px;
-            content: "\f060";
-            color: rgba($black, 1);
+            width: 20px;
+            height: 1px;
             position: absolute;
             z-index: 1;
-            top: 13px;
-            left: 0;
-            opacity: 0;
+            left: -60px;
+            top: 48%;
+            background-color: $design-faded;
+            content: " ";
+            margin-right: 20px;
             margin-left: 25px;
-            transition: opacity 200ms ease-in-out;
+            
+            transition: 300ms color ease-in-out;            
         }
 
         &:hover {
-            padding-left: 60px;
             &::before {
-                opacity: 1;
+                animation: linkLineWidth 350ms ease-in-out;
+                animation-fill-mode: forwards;
+                
             }
         }
     }
-}
-
-@keyframes FOF-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

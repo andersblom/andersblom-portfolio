@@ -136,3 +136,30 @@
         margin-bottom: 0.8em;
     }
 }
+
+.downloadResumeBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.downloadResumeBtn {
+    padding: 10px 20px 10px 20px;
+    background-color: $primary;
+    border-radius: 5px;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    width: 50%;
+
+    margin-top: 1.6em;
+
+    transition: 300ms background-color ease-in-out;
+
+    &:hover {
+        background-color: rgba($primary, 0.7)
+    }
+}

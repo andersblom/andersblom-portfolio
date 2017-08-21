@@ -1,0 +1,10 @@
+@keyframes linkLineWidth {
+    0% { width: 20px }
+    50% { width: 60px }
+    100% { width: 20px; left: calc(100% - 10px); }
+  }
+
+@keyframes FOF-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -18,33 +18,12 @@ export default class About extends Component {
         <div className="aboutSectionContent">
           <h1 className="aboutTitle">Hi there!</h1>
           <div className="aboutParagraph">My name is Anders Blom. I'm 26 years old, and I was born and raised in Kolding, Denmark. Today, I live in the US (currently Buffalo, New York) with my fiancée and our cat, Monkey.</div>
-          <div className="aboutParagraph">I &lt;3 digital things. No matter if it's a website, a mobile app or something that appears on a watch, I can't help but explore and look at the nuts and bolts of the technology behind to see how it works. I'm that guy who inspects a website in Chrome Dev Tools before actually reading what's on there.</div>
+          <div className="aboutParagraph">I &lt;3 digital things. No matter if it's a website, a mobile app or something that appears on a watch, I can't help but explore and look at the nuts and bolts of the technology behind to see how it works. I'm that guy who inspects a website in Chrome Developer Tools before actually reading what's on there.</div>
           <div className="aboutParagraph"><span className="highlight">Im currently on the lookout for new full-time adventures!</span></div>
-
 
           <div className="aboutHistoryContainer">
             <div className="aboutHistoryCol">
-              <h2 className="aboutHistoryColHeader">Education</h2>
-              <div className="aboutHistoryColEntry">
-                <div className="year">2012 - 2014</div>
-                <div className="title">Multimedia Designer</div>
-                <div className="location">Nordic Multimedia Academy, Kolding, Denmark</div>
-                <div className="description">As a part of the Multimedia Designer Programme you are taught various aspects of what you can do with design. 
-                  From advanced design principles, to programming, to the business and communication aspects of what it means to be a designer. 
-                  During this time I really got a taste for advanced Front-end web development with JavaScript.</div>
-              </div>
-
-              <div className="aboutHistoryColEntry">
-                <div className="year">2008 - 2012</div>
-                <div className="title">Media Graphics Designer</div>
-                <div className="location">HANSENBERG, Kolding, Denmark</div>
-                <div className="description">At the Media Graphics Designer programme at HANSENBERG i got introduced to the world of professional graphic design.
-                  Having spent ~4 years playing around in Photoshop and Dreamweaver at this point already, I learned about typography, colors, advanced design techniques, 
-                  and giving design products purpose rather than just looking fancy because that was cool.</div>
-              </div>
-            </div>
-            <div className="aboutHistoryCol">
-              <h2 className="aboutHistoryColHeader">Professional</h2>
+              <h2 className="aboutHistoryColHeader">Experience</h2>
               <div className="aboutHistoryColEntry">
                 <div className="year">2014 - 2017</div>
                 <div className="title">Multimedia Designer & Front-end developer</div>
@@ -64,6 +43,27 @@ export default class About extends Component {
                 <div className="description">Spent the last 2,5 years of my Media Graphics Designer education apprenticing in the marketing-department of F. Engel's workwear division, producing international print and web materials for their brands WorkZone and FE Engel.</div>
               </div>
             </div>
+
+            <div className="aboutHistoryCol">
+              <h2 className="aboutHistoryColHeader">Education</h2>
+              <div className="aboutHistoryColEntry">
+                <div className="year">2012 - 2014</div>
+                <div className="title">Multimedia Designer</div>
+                <div className="location">Nordic Multimedia Academy, Kolding, Denmark</div>
+                <div className="description">As a part of the Multimedia Designer Programme you are taught various aspects of what you can do with design. 
+                  From advanced design principles, to programming, to the business and communication aspects of what it means to be a designer. 
+                  During this time I really got a taste for advanced Front-end web development with JavaScript.</div>
+              </div>
+
+              <div className="aboutHistoryColEntry">
+                <div className="year">2008 - 2012</div>
+                <div className="title">Media Graphics Designer</div>
+                <div className="location">HANSENBERG, Kolding, Denmark</div>
+                <div className="description">At the Media Graphics Designer programme at HANSENBERG i got introduced to the world of professional graphic design.
+                  Having spent ~4 years playing around in Photoshop and Dreamweaver at this point already, I gained a lot of knowledge about typography, colors, advanced design techniques, 
+                  and giving design products purpose, rather than just looking good because the designer said so.</div>
+              </div>
+            </div>
           </div>
 
           <div className="aboutHistoryContainer">
@@ -74,23 +74,26 @@ export default class About extends Component {
               <div className="aboutHistoryColEntry">
                 <div className="title">Code</div>
                 <div className="description">HTML, (S)CSS, React, NodeJS/Express, jQuery, JavaScript ES6, REST API's, Git (GitHub & Bitbucket), Webpack, Wordpress.</div>
-                <div className="description">Intermediate - basic with: AngularJS, Unit testing, Socket.io, PHP, Ubuntu LAMP-stack.</div>
+                <div className="description">Basic knowledge of AngularJS, Unit testing, Socket.io, PHP, Ubuntu LAMP-stack management.</div>
               </div>
 
               <div className="aboutHistoryColEntry">
                 <div className="title">Design</div>
                 <div className="description">Wireframing, User stories, Sketch, Adobe Suite, Prototying (Invision), Mobile / Responsive</div>
-                <div className="description">Intermediate - basic with: Principle, Facebook Origami.</div>
+                <div className="description">Basic knowledge of Principle and Facebook Origami.</div>
               </div>
               
             </div>
 
-            {/* <div className="aboutHistoryCol">
+            <div className="aboutHistoryCol">
               <h2 className="aboutHistoryColHeader">Resume</h2>
               <div className="aboutHistoryColEntry">
-                <div className="description">You can download my resume here: (BUTTON)</div>
+                <div className="description">My resume can be downloaded here. Please feel free to reach out if you are missing any information.</div>
+                <div className="downloadResumeBtnContainer">
+                  <Link to="/files/resume" className="downloadResumeBtn">Download</Link>
+                </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         </ReactCSSTransitionGroup>

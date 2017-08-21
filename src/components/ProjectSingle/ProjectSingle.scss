@@ -1,44 +1,47 @@
 @import '../../global/global.scss';
 
+.btnHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
 .backBtnBottom {
-    padding: 16px 30px 14px 30px;
-    background-color: $white;
-    border-radius: 2px;
-    border-color: $black;
-    border-width: 1px;
-    border-style: solid;
-    text-align: center;
-    margin: 30px auto 30px auto;
+    display: block;
     text-decoration: none;
-    transition: 200ms background-color ease-in-out;
+    color: $black;
+    font-weight: 100;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-weight: 300;
     font-size: 13px;
-    letter-spacing: 0.3em;
+    margin-top: 2em;
+    margin-bottom: 1em;
     position: relative;
-    z-index: 0;
-    transition: padding 200ms ease-in-out;
-    //backBtnBottom color is down in line ~75
+    transition: all 200ms ease-in-out;
 
     &::before {
         font-family: FontAwesome, "FontAwesome";
-        width: 10px;
-        height: 10px;
-        content: "\f060";
-        color: rgba($black, 1);
+        width: 20px;
+        height: 1px;
         position: absolute;
         z-index: 1;
-        top: 16px;
-        left: 0;
-        opacity: 0;
+        left: -60px;
+        top: 45%;
+        background-color: $design-faded;
+        content: " ";
+        margin-right: 20px;
         margin-left: 25px;
-        transition: opacity 200ms ease-in-out;
+        
+        transition: 300ms color ease-in-out;            
     }
 
     &:hover {
-        padding-left: 60px;
+        color: $primary;
         &::before {
-            opacity: 1;
+            animation: linkLineWidth 350ms ease-in-out;
+            animation-fill-mode: forwards;
+            
         }
     }
 }
@@ -74,7 +77,8 @@
 
         a {
             color: $black; //backBtnBottom color
-            font-weight: 100;
+            font-weight: 400;
+            letter-spacing: 0.2em;
         }
     }
 
@@ -160,12 +164,23 @@
         margin-top: 1.6em;
         margin-bottom: 0.3em;
     }
+    h4 {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 1.2em;
+        margin-bottom: -0.6em;
+        display: block;
+    }
 
     ul {
         margin-bottom: 0.8em;
         li {
-            margin-left: 18px;
+            margin-left: 1em;
             margin-bottom: 0.6em;
+            color: $black;
+            font-weight: 100;
+            font-size: 14px;
+            line-height: 1.7em;
         }
     }
 
@@ -192,6 +207,15 @@
         margin-right: 4px;
         color: $design_faded;
         border-radius: 2px;
+    }
+
+    img + em, div + em {
+        margin-top: -3.6em;
+        margin-bottom: 4em;
+        display: block;
+        text-align: center;
+        font-size: 13px;
+        color: $design-faded;
     }
 
     .fullWidth {

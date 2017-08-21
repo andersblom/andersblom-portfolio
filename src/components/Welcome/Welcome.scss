@@ -79,31 +79,43 @@ h2 {
 
     a {
         text-decoration: none;
-        padding: 20px 20px 20px 20px;
+        padding: 16px 20px 16px 20px;
         background-color: $white;
         color: $design_faded;
-        border-radius: 3px;
-        transition: 300ms background-color ease-in-out;
+        border-radius: 4px;
+        transition: 300ms background-color ease-in-out, 300ms color ease-in-out, 300ms box-shadow ease-in-out;
+
+        box-shadow: none;
 
         &:hover {
-            background-color: $design;
+            background-color: $primary;
+            box-shadow: 0px 4px 30px 1px rgba($primary, 0.15);
+
+            i {
+                color: $white;
+            }
+
+            .iconExplainer {
+                color: $white;
+            }
         }
     }
 
     .designIcon, .codeIcon {
         text-align: center;
-        margin-top: 0.4em;
+        margin-top: 0.6em;
         
         i {
             color: $primary;
-            margin-bottom: 1em;
+            margin-bottom: 0.8em;
             font-size: 20px;
+            transition: 300ms color ease-in-out;
         }
 
         .iconExplainer {
             font-size: 14px;
             color: $code-faded;
-
+            transition: 300ms color ease-in-out;
         }
     }   
 }
