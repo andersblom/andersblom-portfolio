@@ -15,7 +15,7 @@ export default class Loader extends Component {
     componentDidMount() {
         this.loadTimeout = setTimeout(() => {
             this.setState({timeout: true});
-        },3500)
+        },2500)
     }
 
     componentWillUnmount() {
