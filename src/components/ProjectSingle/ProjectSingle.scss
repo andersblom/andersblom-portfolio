@@ -194,6 +194,14 @@
         border-radius: 2px;
     }
 
+    em {
+        margin-top: -3.6em;
+        display: block;
+        text-align: center;
+        font-size: 13px;
+        color: $design-faded;
+    }
+
     .fullWidth {
         width: 100%;
     }
