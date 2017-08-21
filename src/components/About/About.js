@@ -60,8 +60,8 @@ export default class About extends Component {
                 <div className="title">Media Graphics Designer</div>
                 <div className="location">HANSENBERG, Kolding, Denmark</div>
                 <div className="description">At the Media Graphics Designer programme at HANSENBERG i got introduced to the world of professional graphic design.
-                  Having spent ~4 years playing around in Photoshop and Dreamweaver at this point already, I learned about typography, colors, advanced design techniques, 
-                  and giving design products purpose rather than just looking fancy because that was cool.</div>
+                  Having spent ~4 years playing around in Photoshop and Dreamweaver at this point already, I gained a lot of knowledge about typography, colors, advanced design techniques, 
+                  and giving design products purpose, rather than just looking good because the designer said so.</div>
               </div>
             </div>
           </div>
@@ -88,7 +88,10 @@ export default class About extends Component {
             <div className="aboutHistoryCol">
               <h2 className="aboutHistoryColHeader">Resume</h2>
               <div className="aboutHistoryColEntry">
-                <div className="description">You can download my resume here: (BUTTON)</div>
+                <div className="description">My resume can be downloaded here. Please feel free to reach out if you are missing any information.</div>
+                <div className="downloadResumeBtnContainer">
+                  <Link to="/files/resume" className="downloadResumeBtn">Download</Link>
+                </div>
               </div>
             </div>
           </div>
