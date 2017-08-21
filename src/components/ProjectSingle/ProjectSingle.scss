@@ -1,5 +1,12 @@
 @import '../../global/global.scss';
 
+.btnHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
 .backBtnBottom {
     display: block;
     text-decoration: none;
@@ -32,7 +39,7 @@
     &:hover {
         color: $primary;
         &::before {
-            animation: linkLineWidth 400ms ease-in-out;
+            animation: linkLineWidth 350ms ease-in-out;
             animation-fill-mode: forwards;
             
         }
@@ -70,7 +77,8 @@
 
         a {
             color: $black; //backBtnBottom color
-            font-weight: 100;
+            font-weight: 400;
+            letter-spacing: 0.2em;
         }
     }
 
