@@ -21,8 +21,29 @@ export default class About extends Component {
           <div className="aboutParagraph">I &lt;3 digital things. No matter if it's a website, a mobile app or something that appears on a watch, I can't help but explore and look at the nuts and bolts of the technology behind to see how it works. I'm that guy who inspects a website in Chrome Developer Tools before actually reading what's on there.</div>
           <div className="aboutParagraph"><span className="highlight">Im currently on the lookout for new full-time adventures!</span></div>
 
-
           <div className="aboutHistoryContainer">
+            <div className="aboutHistoryCol">
+              <h2 className="aboutHistoryColHeader">Experience</h2>
+              <div className="aboutHistoryColEntry">
+                <div className="year">2014 - 2017</div>
+                <div className="title">Multimedia Designer & Front-end developer</div>
+                <div className="location">RED INK A/S, Odense, Denmark</div>
+                <div className="description">Various tasks involving Web/Graphic/UI design and Front-end development for clients like LEGOLAND Billund Resort, Universal Robots, Danish Diabetes Academy and many more. Spent a lot of my 3 years mentoring various apprentices/interns.</div>
+              </div>
+              <div className="aboutHistoryColEntry">
+                <div className="year">2013 - 2014</div>
+                <div className="title">Graphic designer, Web developer</div>
+                <div className="location">SecPro Security, Kolding, Denmark</div>
+                <div className="description">Sole in-house Graphic/Web designer and Front-end developer. Daily tasks maintaining and improving 4 of the companies websites for different security systems.</div>
+              </div>
+              <div className="aboutHistoryColEntry">
+                <div className="year">2010 - 2012</div>
+                <div className="title">Graphic design apprentice</div>
+                <div className="location">F. Engel K/S, Haderslev, Denmark</div>
+                <div className="description">Spent the last 2,5 years of my Media Graphics Designer education apprenticing in the marketing-department of F. Engel's workwear division, producing international print and web materials for their brands WorkZone and FE Engel.</div>
+              </div>
+            </div>
+
             <div className="aboutHistoryCol">
               <h2 className="aboutHistoryColHeader">Education</h2>
               <div className="aboutHistoryColEntry">
@@ -43,27 +64,6 @@ export default class About extends Component {
                   and giving design products purpose rather than just looking fancy because that was cool.</div>
               </div>
             </div>
-            <div className="aboutHistoryCol">
-              <h2 className="aboutHistoryColHeader">Professional</h2>
-              <div className="aboutHistoryColEntry">
-                <div className="year">2014 - 2017</div>
-                <div className="title">Multimedia Designer & Front-end developer</div>
-                <div className="location">RED INK A/S, Odense, Denmark</div>
-                <div className="description">Various tasks involving Web/Graphic/UI design and Front-end development for clients like LEGOLAND Billund Resort, Universal Robots, Danish Diabetes Academy and many more. Spent a lot of my 3 years mentoring various apprentices/interns.</div>
-              </div>
-              <div className="aboutHistoryColEntry">
-                <div className="year">2013 - 2014</div>
-                <div className="title">Graphic designer, Web developer</div>
-                <div className="location">SecPro Security, Kolding, Denmark</div>
-                <div className="description">Sole in-house Graphic/Web designer and Front-end developer. Daily tasks maintaining and improving 4 of the companies websites for different security systems.</div>
-              </div>
-              <div className="aboutHistoryColEntry">
-                <div className="year">2010 - 2012</div>
-                <div className="title">Graphic design apprentice</div>
-                <div className="location">F. Engel K/S, Haderslev, Denmark</div>
-                <div className="description">Spent the last 2,5 years of my Media Graphics Designer education apprenticing in the marketing-department of F. Engel's workwear division, producing international print and web materials for their brands WorkZone and FE Engel.</div>
-              </div>
-            </div>
           </div>
 
           <div className="aboutHistoryContainer">
@@ -74,23 +74,23 @@ export default class About extends Component {
               <div className="aboutHistoryColEntry">
                 <div className="title">Code</div>
                 <div className="description">HTML, (S)CSS, React, NodeJS/Express, jQuery, JavaScript ES6, REST API's, Git (GitHub & Bitbucket), Webpack, Wordpress.</div>
-                <div className="description">Intermediate - basic with: AngularJS, Unit testing, Socket.io, PHP, Ubuntu LAMP-stack.</div>
+                <div className="description">Basic knowledge of AngularJS, Unit testing, Socket.io, PHP, Ubuntu LAMP-stack management.</div>
               </div>
 
               <div className="aboutHistoryColEntry">
                 <div className="title">Design</div>
                 <div className="description">Wireframing, User stories, Sketch, Adobe Suite, Prototying (Invision), Mobile / Responsive</div>
-                <div className="description">Intermediate - basic with: Principle, Facebook Origami.</div>
+                <div className="description">Basic knowledge of Principle and Facebook Origami.</div>
               </div>
               
             </div>
 
-            {/* <div className="aboutHistoryCol">
+            <div className="aboutHistoryCol">
               <h2 className="aboutHistoryColHeader">Resume</h2>
               <div className="aboutHistoryColEntry">
                 <div className="description">You can download my resume here: (BUTTON)</div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         </ReactCSSTransitionGroup>
