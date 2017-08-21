@@ -8,14 +8,19 @@ export default class Loader extends Component {
     constructor() {
         super();
         this.state = {
-            timeout: false
+            timeout: false,
         }
     }
 
     componentDidMount() {
-        let loaderTimeout = setTimeout(() => {
+        this.loadTimeout = setTimeout(() => {
             this.setState({timeout: true});
         },3500)
+    }
+
+    componentWillUnmount() {
+        window.clearTimeout(this.loadTimeout);
+        this.loadTimeout = false;
     }
 
     render() {
