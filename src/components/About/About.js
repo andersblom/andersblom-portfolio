@@ -85,7 +85,7 @@ export default class About extends Component {
               
             </div>
 
-            <div className="aboutHistoryCol">
+            {/* <div className="aboutHistoryCol">
               <h2 className="aboutHistoryColHeader">Resume</h2>
               <div className="aboutHistoryColEntry">
                 <div className="description">My resume can be downloaded here. Please feel free to reach out if you are missing any information.</div>
@@ -93,7 +93,7 @@ export default class About extends Component {
                   <Link to="/files/resume" className="downloadResumeBtn">Download</Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         </ReactCSSTransitionGroup>

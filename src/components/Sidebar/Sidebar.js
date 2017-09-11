@@ -56,7 +56,7 @@ export default class Sidebar extends Component {
                         {this.getWorkLink()}
                         {this.getRelevantShowcaseWebsite()}
 
-                        {/* <li><Link to={(this.props.match.url === "/" || this.props.match.url === "/about" || this.props.match.url === "/contact") ? `/about` : `${this.props.match.path}/about`}>About me</Link></li> */}
+                        <li><Link to={(this.props.match.url === "/" || this.props.match.url === "/about" || this.props.match.url === "/contact") ? `/about` : `${this.props.match.path}/about`}>About me</Link></li>
                         <li><Link to={(this.props.match.url === "/" || this.props.match.url === "/about" || this.props.match.url === "/contact") ? `/contact` : `${this.props.match.path}/contact`}>Contact</Link></li>
                     </ul>
                 </nav>
