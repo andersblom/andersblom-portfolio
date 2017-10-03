@@ -28,7 +28,7 @@ export default class About extends Component {
                 <div className="year">2014 - 2017</div>
                 <div className="title">Multimedia Designer & Front-end developer</div>
                 <div className="location">RED INK A/S, Odense, Denmark</div>
-                <div className="description">Various tasks involving Web/Graphic/UI design and Front-end development for clients like LEGOLAND Billund Resort, Universal Robots, Danish Diabetes Academy and many more. Spent a lot of my 3 years mentoring various apprentices/interns.</div>
+                <div className="description">Various tasks involving Web/Graphic/UI design and Front-end development for clients like LEGOLAND Billund Resort, Universal Robots, Danish Diabetes Academy and many more. Spent a lot of my 3.5 years mentoring various apprentices/interns.</div>
               </div>
               <div className="aboutHistoryColEntry">
                 <div className="year">2013 - 2014</div>
