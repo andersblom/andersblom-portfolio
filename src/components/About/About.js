@@ -4,6 +4,8 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './About.css';
 
+import resumePDF from './andersblom_resume_dual.pdf';
+
 import profilePic from '../Welcome/anders_profile.jpg';
 
 export default class About extends Component {
@@ -85,15 +87,15 @@ export default class About extends Component {
               
             </div>
 
-            {/* <div className="aboutHistoryCol">
+            <div className="aboutHistoryCol">
               <h2 className="aboutHistoryColHeader">Resume</h2>
               <div className="aboutHistoryColEntry">
                 <div className="description">My resume can be downloaded here. Please feel free to reach out if you are missing any information.</div>
                 <div className="downloadResumeBtnContainer">
-                  <Link to="/files/resume" className="downloadResumeBtn">Download</Link>
+                  <a href={resumePDF} target="_blank" className="downloadResumeBtn">Download</a>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         </ReactCSSTransitionGroup>
