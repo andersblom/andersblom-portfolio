@@ -27,8 +27,8 @@ export default class Welcome extends Component {
                                     Designer who codes. Developer who designs. <br />Born and raised in Kolding, Denmark. Now living in the United States.
                                 </h2>
                                 <span className="about">
-                                    I've been at it since back when putting "optimized for IE in 800x600" in your footer was not an internet crime.
-                                    Today, whether I'm pixel-pushing UI, neck-deep in JavaScript-hacking, or brainstorming ideas with a team, I still love the work I do. Let me show you:
+                                    I've been at it since back when putting "optimized for IE in 800x600" in your footer was not considered an internet crime.
+                                    Today, whether I'm pixel-pushing UI, neck-deep in JavaScript-hacking, or brainstorming ideas with a team, I still love the work I do. Let me show you!
                                 </span>
                                 
                                 <h2 className="catPicker">What work would you like to see?</h2>
