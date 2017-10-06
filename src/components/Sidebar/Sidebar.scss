@@ -114,8 +114,8 @@
 
 .neutral {
     background-color: $white;
-    border-right: 1px solid $design;
-    border-bottom: 1px solid $design;
+    border-right: 1px solid $code-text;
+    border-bottom: 1px solid $code-text;
     
     .logo {
         @extend %font-stack-design;

@@ -13,12 +13,15 @@
 
 .welcomeContent {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     max-width: 600px;
     margin-top: 20px;
     @include mq(xs) {
         max-width: 90%;
+    }
+    @include mq(sm) {
+        max-width: 80%;
     }
 }
 
@@ -37,23 +40,60 @@
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     @extend %font-stack-main;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 0.2em;
+}
+
+h2.subHeader {
+    margin-top: 0em;
+    margin-bottom: 1.2em;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 300;
+    color: $code_faded;
 }
 
 .about, .no-worries {
-    text-align: center;
     @extend %font-stack-main;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6em;
     color: $black;
 }
 
-.welcome-content-wrapper {
+.about {
+    text-align: left;
+    margin-bottom: 8vh;
+    display: block;
+}
+
+.no-worries {
     text-align: center;
+
+    .header-text {
+        display: none;
+    }
+
+    .sidebar-text {
+        display: inline;
+    }
+
+    @include mq(xs) {
+        .header-text {
+            display: inline;
+        }
+
+        .sidebar-text {
+            display: none;
+        }
+    }
+}
+
+.welcome-content-wrapper {
+    text-align: left;
 }
 
 h2 {

@@ -30,6 +30,10 @@
     }
 }
 
+.inlineResumeLink {
+    color: $primary;
+}
+
 .aboutSectionContent {
     transition: 300ms transform ease-in-out, 300ms opacity ease-in-out;
 }
