@@ -4,7 +4,9 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './About.css';
 
-import resumePDF from './andersblom_resume_dual.pdf';
+import dualResumePDF from './andersblom_resume_dual.pdf';
+import devResumePDF from './andersblom_resume_dev.pdf';
+import designerResumePDF from './andersblom_resume_design.pdf';
 
 import profilePic from '../Welcome/anders_profile.jpg';
 
@@ -22,7 +24,7 @@ export default class About extends Component {
           <div className="aboutParagraph">My name is Anders Blom. I'm 26 years old, and I was born and raised in Kolding, Denmark. Today, I live in the US (currently Buffalo, New York) with my wife and our cat, Monkey.</div>
           <div className="aboutParagraph">I &lt;3 digital things. No matter if it's a website, a mobile app or something that appears on a watch, I can't help but explore and look at the nuts and bolts of the technology behind to see how it works. I'm that guy who inspects a website in Chrome Developer Tools before actually reading what's on there.</div>
           <div className="aboutParagraph">I also love music of any kind, video games, pets and travelling.</div>
-          <div className="aboutParagraph"><span className="highlight">Im currently on the lookout for new full-time adventures! <br />Does this tickle your interest? Let me casually present you: <a href={resumePDF} target="_blank" className="inlineResumeLink">my resume</a>!</span></div>
+          <div className="aboutParagraph"><span className="highlight">Im currently on the lookout for new full-time adventures! <br />Does this tickle your interest? Let me casually present you: <a href={dualResumePDF} target="_blank" className="inlineResumeLink">my resume</a>!</span></div>
 
           <div className="aboutHistoryContainer">
             <div className="aboutHistoryCol">
@@ -93,7 +95,9 @@ export default class About extends Component {
               <div className="aboutHistoryColEntry">
                 <div className="description">My resume can be downloaded here. Please feel free to reach out if you are missing any information.</div>
                 <div className="downloadResumeBtnContainer">
-                  <a href={resumePDF} target="_blank" className="downloadResumeBtn">Download</a>
+                  <a href={dualResumePDF} target="_blank" className="downloadResumeBtn">Designer & Developer</a>
+                  <a href={designerResumePDF} target="_blank" className="downloadResumeBtn">Designer</a>
+                  <a href={devResumePDF} target="_blank" className="downloadResumeBtn">Developer</a>
                 </div>
               </div>
             </div>
