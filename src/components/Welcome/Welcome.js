@@ -19,7 +19,7 @@ export default class Welcome extends Component {
                         <div className="welcomeContent">
                             {/* <ReactCSSTransitionGroup component="div" className="welcome-img" transitionName="fadeIn-delayed" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}><img className="profilePic" src={profilePic} alt="Anders" /></ReactCSSTransitionGroup> */}
                             <ReactCSSTransitionGroup transitionName="slideIn" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}>
-                                <h1>Hi there, new friend! I'm Anders. <span role="img" aria-label="Waving emoji">👋</span></h1>
+                                <h1 className="welcometitle">Hi there, new friend! I'm Anders. <span role="img" aria-label="Waving emoji">👋</span></h1>
                             </ReactCSSTransitionGroup>
                         
                             <ReactCSSTransitionGroup component="div" className="welcome-content-wrapper" transitionName="fadeIn-delayed" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}>
