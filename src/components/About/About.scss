@@ -49,6 +49,13 @@
     margin-bottom: 2em;
 }
 
+.resumeTitle {
+    font-size: 24px;
+    @extend %font-stack-main;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
 .aboutParagraph {
     font-size: 16px;
     line-height: 1.7em;
@@ -66,7 +73,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 3em;
+    margin-top: 0.2em;
 }
 
 .aboutHistoryCol {

@@ -26,6 +26,7 @@ export default class About extends Component {
           <div className="aboutParagraph">I also love music of any kind, video games, pets and travelling.</div>
           <div className="aboutParagraph"><span className="highlight">Im currently on the lookout for new full-time adventures! <br />Does this tickle your interest? Let me casually present you: <a href={dualResumePDF} target="_blank" className="inlineResumeLink">my resume</a>!</span></div>
 
+          <h1 className="resumeTitle">Resume</h1>
           <div className="aboutHistoryContainer">
             <div className="aboutHistoryCol">
               <h2 className="aboutHistoryColHeader">Experience</h2>
