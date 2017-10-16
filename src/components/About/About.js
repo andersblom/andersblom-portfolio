@@ -23,7 +23,14 @@ export default class About extends Component {
           <h1 className="aboutTitle">Hi there!</h1>
           <div className="aboutParagraph">My name is Anders Blom. I'm 26 years old, and I was born and raised in Kolding, Denmark. Today, I live in the US (currently Buffalo, New York) with my wife and our cat, Monkey.</div>
           <div className="aboutParagraph">I &lt;3 digital things. No matter if it's a website, a mobile app or something that appears on a watch, I can't help but explore and look at the nuts and bolts of the technology behind to see how it works. I'm that guy who inspects a website in Chrome Developer Tools before actually reading what's on there.</div>
-          <div className="aboutParagraph">I also love music of any kind, video games, pets and travelling.</div>
+          <div className="aboutParagraph">
+            I also love:
+            <ul>
+              <li>Listen to music of any kind (Lately <em>a lot</em> of <a href="https://open.spotify.com/artist/4LEiUm1SRbFMgfqnQTwUbQ" target="_blank" className="inlineResumeLink">Bon Iver</a> and <a href="https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L" target="_blank" className="inlineResumeLink">Logic</a>)</li> 
+              <li>Video games (Watching competetive games, and play an occasional game of Hearthstone)</li> 
+              <li>Animals (I'm a cat-AND-dog-person. Yes, we exist.)</li>
+            </ul>
+          </div>
           <div className="aboutParagraph"><span className="highlight">Im currently on the lookout for new full-time adventures! <br />Does this tickle your interest? <a href="mailto:anders@andersblom.dk" className="inlineResumeLink">Let's talk!</a></span></div>
 
           <div className="aboutHistoryContainer">
