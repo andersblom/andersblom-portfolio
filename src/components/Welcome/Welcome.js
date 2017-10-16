@@ -24,7 +24,7 @@ export default class Welcome extends Component {
                         
                             <ReactCSSTransitionGroup component="div" className="welcome-content-wrapper" transitionName="fadeIn-delayed" transitionAppearTimeout={0} transitionAppear={true} transitionEnter={false} transitionLeave={false}>
                                 <h2 className="subHeader">
-                                    Designer who codes. Developer who designs. <br />Born and raised in Kolding, Denmark. Now living in the United States.
+                                    I'm a designer who codes. And a developer who designs. <br />Born and raised in Kolding, Denmark. Now living in the United States.
                                 </h2>
                                 <span className="about">
                                     I've been at it since back when putting "optimized for IE in 800x600" in your footer was not considered an internet crime.
