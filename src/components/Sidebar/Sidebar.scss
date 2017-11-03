@@ -162,6 +162,10 @@
     nav ul li a {
         color: $code-text;
     }
+
+    .stateNav-clickable {
+        color: $code_faded;
+    }
 }
 
 .stateNav i {
@@ -173,4 +177,17 @@
 
 .contact-mobile {
     display: none;
+}
+
+.stateNav-clickable {
+    font-size: 12px;
+    color: $design_faded;
+    opacity: 0.25;
+    margin-bottom: 1.1em;
+    cursor: pointer;
+
+    @include mq(xs) {
+        display: none;
+    }
+
 }

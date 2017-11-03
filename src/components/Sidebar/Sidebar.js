@@ -22,6 +22,7 @@ export default class Sidebar extends Component {
     }
 
     changeCategoryHandler(cat) {
+        this.removeSidebarClickTip()
         this.props.categoryHandler(cat)
     }
 
@@ -35,10 +36,26 @@ export default class Sidebar extends Component {
         }
     }
 
+    getIconClickTip() {
+        if (localStorage.getItem("andersblom_stateNavClickHelp") == undefined) {
+            return (<div className="stateNav-clickable" onClick={() => {this.removeSidebarClickTip()}}><i className="fa fa-arrow-down" style={{ marginRight: "8px", marginBottom: "0px" }} aria-hidden="true"></i> (These are clickable too!)</div>);
+        } else {
+            return "";
+        }
+    }
+
+    removeSidebarClickTip() {
+        if (localStorage.getItem("andersblom_stateNavClickHelp") == undefined) {
+            localStorage.setItem("andersblom_stateNavClickHelp", false);
+            this.forceUpdate()
+        } 
+    }
+
     render() {
         return(
             <div className={"sidebar " + (this.props.category === "code" ? "code" : "") + (this.props.category === "design" ? "design" : "") + (this.props.category === undefined ? "neutral" : "")}>
                 <div className="stateNav">
+                    {this.getIconClickTip()}
                     <Link to="/design" onClick={this.changeCategoryHandler.bind(this, "design")}><i className="fa fa-diamond" aria-hidden="true"></i></Link>
                     <Link to="/code" onClick={this.changeCategoryHandler.bind(this, "code")}><i className="fa fa-code" aria-hidden="true"></i></Link>
                     <Link to="/contact" className="contact-mobile"><i className="fa fa-phone" aria-hidden="true"></i></Link>
