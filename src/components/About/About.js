@@ -9,12 +9,15 @@ import devResumePDF from './andersblom_resume_dev.pdf';
 import designerResumePDF from './andersblom_resume_design.pdf';
 
 import profilePic from '../Welcome/anders_profile.jpg';
+import monkeyPic from './monkey.jpg';
+import samPic from './samanders.jpg';
 
 export default class About extends Component {
   constructor() {
     super();
     this.state = {
-      showingMonkey: false
+      showingMonkey: false,
+      showingSam: false
     }
   }
 
@@ -23,18 +26,33 @@ export default class About extends Component {
       showingMonkey: !this.state.showingMonkey
     });
   }
+  toggleSam() {
+    this.setState({
+      showingSam: !this.state.showingSam
+    });
+  }
+
+  getRelevantPic() {
+    if (this.state.showingMonkey) {
+      return monkeyPic;
+    } else if (this.state.showingSam) {
+      return samPic;
+    } else {
+      return profilePic;
+    }
+  }
 
   render() {
     return (
       <div className="aboutSection">
         <ReactCSSTransitionGroup component="div" className="profilePicContainer" transitionName="fadeInUp" transitionAppearTimeout={300} transitionAppear={true} transitionEnter={true} transitionEnterTimeout={500} transitionLeave={false}>
-          <img className="profilePic" src={profilePic} alt="Anders" />
+          <img className="profilePic" src={this.getRelevantPic()} alt="Anders" />
         </ReactCSSTransitionGroup>
 
         <ReactCSSTransitionGroup transitionName="fadeInUp" transitionAppearTimeout={700} transitionAppear={true} transitionEnter={true} transitionEnterTimeout={500} transitionLeave={false}>
         <div className="aboutSectionContent">
           <h1 className="aboutTitle">Hi there!</h1>
-          <div className="aboutParagraph">My name is Anders Blom. I'm 26 years old, and I was born and raised in Kolding, Denmark. Today, I live in the US (currently Buffalo, New York) with my wife and our cat, <span style={{textDecoration: "underline"}} onMouseEnter={() => this.toggleMonkey()} onMouseEnter={() => this.toggleMonkey()}>Monkey</span>.</div>
+          <div className="aboutParagraph">My name is Anders Blom. I'm 26 years old, and I was born and raised in Kolding, Denmark. Today, I live in the US (currently Buffalo, New York) with my <span className="highlightWithPics" onMouseEnter={() => this.toggleSam()} onMouseLeave={() => this.toggleSam()}>wife</span> and our cat, <span className="highlightWithPics" onMouseEnter={() => this.toggleMonkey()} onMouseLeave={() => this.toggleMonkey()}>Monkey</span>.</div>
           <div className="aboutParagraph">I &lt;3 digital things. No matter if it's a website, a mobile app or something that appears on a watch, I can't help but explore and look at the nuts and bolts of the technology behind to see how it works. I'm that guy who inspects a website in Chrome Developer Tools before actually reading what's on there.</div>
           <div className="aboutParagraph">
             I also love:
@@ -45,6 +63,22 @@ export default class About extends Component {
             </ul>
           </div>
           <div className="aboutParagraph"><span className="highlight">Im currently on the lookout for new full-time adventures! <br />Does this tickle your interest? <a href="mailto:anders@andersblom.dk" className="inlineResumeLink">Let's talk!</a></span></div>
+
+          <div className="clientsIWorkedWith">
+            <div className="clientsHeader">I’ve had the pleasure of working with some pretty interesting companies so far:</div>
+            <div className="clientsGrid">
+              <div className="clientEntry">LEGOLAND® Billund Resort</div>			
+              <div className="clientEntry">VisitSweden</div>
+              <div className="clientEntry">Universal Robots</div>					
+              <div className="clientEntry">LEGO® Education</div>
+              <div className="clientEntry">Danish Diabetes Academy</div>			
+              <div className="clientEntry">University of Southern Denmark</div>
+              <div className="clientEntry">B&R Automation</div>						
+              <div className="clientEntry">KOMPAN</div>
+              <div className="clientEntry">Sanofi Pasteur</div>						
+            </div>
+            <div className="clientsMore">… and many, many more!</div>
+          </div>
 
           <div className="aboutHistoryContainer">
             <div className="aboutHistoryCol">

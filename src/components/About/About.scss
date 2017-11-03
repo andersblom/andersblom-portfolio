@@ -175,3 +175,36 @@
         background-color: rgba($primary, 0.7)
     }
 }
+
+.highlightWithPics {
+    text-decoration: underline;
+    color: $primary;
+    cursor: pointer;
+}
+
+.clientsIWorkedWith {
+    margin-top: 5em;
+
+    font-size: 14px;
+    line-height: 1.7em;
+    margin-bottom: 1em;
+    color: $design-faded;
+}
+
+.clientsHeader {
+    font-weight: bold;
+    color: $black;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0.4em;
+}
+
+.clientsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.clientsMore {
+    margin-top: 0.8em;
+    margin-bottom: 4em;
+}
