@@ -125,13 +125,21 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 
     a {
         text-decoration: none;
         width: 49%;
         box-sizing: border-box;
         padding: 76px 20px 76px 20px;
+        @include mq(xs) {
+            width: 45%;
+            padding: 46px 20px 46px 20px;
+        }
+        @include mq(sm) {
+            width: 47%;
+            padding: 56px 20px 56px 20px;
+        }
         background-color: $white;
         color: $design_faded;
         border-radius: 4px;
@@ -186,6 +194,7 @@ h2 {
 
         .iconExplainer {
             font-size: 14px;
+            margin-top: -10px;
             color: $code-faded;
             transition: 
                 300ms transform ease-in-out,
@@ -194,7 +203,7 @@ h2 {
             ;
         }
         .iconExplainer--hover {
-            transform: translateY(-43px);
+            transform: translateY(-35px);
             margin-top: -16px;
             text-transform: uppercase;
             font-weight: 700;
@@ -210,6 +219,10 @@ h2 {
 
     .designIcon:hover {
         background-color: $design;
+
+        .iconExplainer--hover {
+            color: $primary;
+        }
     }
 
     .codeIcon:hover {
