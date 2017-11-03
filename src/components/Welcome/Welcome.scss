@@ -15,13 +15,17 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    max-width: 640px;
+    max-width: 740px;
     margin-top: 0;
     @include mq(xs) {
         max-width: 90%;
+        margin-top: 20px;
     }
     @include mq(sm) {
         max-width: 80%;
+    }
+    @include mq(md) {
+        max-width: 640px;
     }
 }
 
@@ -43,32 +47,35 @@
     text-align: left;
     @extend %font-stack-main;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 0.2em;
     margin-top: 0;
+    line-height: 1.4em;
 }
 
 h2.subHeader {
     margin-top: 0em;
     margin-bottom: 1.2em;
-    font-size: 18px;
+    font-size: 24px;
     text-align: left;
-    font-weight: 300;
+    font-weight: 400;
     color: $code_faded;
+    line-height: 1.4em;
 }
 
 .about, .no-worries {
     @extend %font-stack-main;
-    font-weight: 400;
-    line-height: 1.6em;
-    color: $black;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: $design_faded;
 }
 
 .about {
     text-align: left;
-    margin-bottom: 0.8em;
+    margin-bottom: 1.4em;
     display: block;
-    font-size: 15px;
+    font-size: 16px;
+    -webkit-font-smoothing: auto;
 }
 
 
@@ -105,11 +112,13 @@ h2 {
     font-weight: 500;
     font-size: 18px;
     margin-bottom: 0.4em;
-    margin-top: 1.4em;
+    margin-top: 1.8em;
 }
 
 .catPicker {
-    margin-bottom: 0;
+    margin-bottom: 1.8em;
+    margin-top: 1.8em;
+    text-align: left !important;
 }
 
 .welcome-icon-wrapper {
@@ -117,50 +126,106 @@ h2 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    width: 200px;
-    margin: 0em auto 0.4em auto;
 
     a {
         text-decoration: none;
-        padding: 16px 20px 16px 20px;
+        width: 49%;
+        box-sizing: border-box;
+        padding: 76px 20px 76px 20px;
         background-color: $white;
         color: $design_faded;
         border-radius: 4px;
-        transition: 300ms background-color ease-in-out, 300ms color ease-in-out, 300ms box-shadow ease-in-out;
+        transition: 
+        300ms background-color ease-in-out, 
+        300ms color ease-in-out, 
+        300ms box-shadow ease-in-out,
+        300ms transform ease-in-out;
 
-        box-shadow: none;
+        box-shadow: 0px 5px 30px 0px rgba($code_faded, 0.3);
 
         &:hover {
-            background-color: $primary;
-            box-shadow: 0px 4px 30px 1px rgba($primary, 0.15);
-
+            box-shadow: 0px 10px 30px 1px rgba($code_faded, 0.35);
             i {
-                color: $white;
+                color: rgba($design_faded, 0.1);
+                transform: translateY(15px)
             }
 
             .iconExplainer {
-                color: $white;
+                transform: translateY(-45px);
+                opacity: 0;
             }
+
+            .iconExplainer--hover {
+                opacity: 1;
+            }
+
         }
     }
 
     .designIcon, .codeIcon {
         text-align: center;
         margin-top: 0.6em;
+        transition: 
+            300ms transform ease-in-out,
+            300ms opacity ease-in-out,
+            300ms color ease-in-out,
+            300ms background-color ease-in-out,
+            300ms box-shadow ease-in-out,
+        ;
         
         i {
-            color: $primary;
+            color: $design-faded;
             margin-bottom: 0.8em;
-            font-size: 20px;
-            transition: 300ms color ease-in-out;
+            font-size: 40px;
+            transition: 
+                300ms color ease-in-out,
+                300ms transform ease-in-out
+            ;
         }
 
         .iconExplainer {
             font-size: 14px;
             color: $code-faded;
-            transition: 300ms color ease-in-out;
+            transition: 
+                300ms transform ease-in-out,
+                300ms opacity ease-in-out,
+                300ms color ease-in-out
+            ;
+        }
+        .iconExplainer--hover {
+            transform: translateY(-43px);
+            margin-top: -16px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.4em;
+            font-size: 14px;
+            opacity: 0;
+            transition: 
+                300ms opacity ease-in-out 80ms,
+                300ms color ease-in-out 80ms,
+            ;
         }
     }   
+
+    .designIcon:hover {
+        background-color: $design;
+    }
+
+    .codeIcon:hover {
+        background-color: $code;
+        i {
+            color: $white;
+            opacity: 0.15;
+            transition: 
+                300ms opacity ease-in-out 80ms,
+                300ms color ease-in-out 80ms,
+                300ms transform ease-in-out 80ms,
+            ;
+        }
+        .iconExplainer--hover {
+            color: $white;
+        }
+    }
 }
 
 .extraProjectsTeaser {
