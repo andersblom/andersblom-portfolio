@@ -38,7 +38,7 @@ export default class Sidebar extends Component {
 
     getIconClickTip() {
         if (localStorage.getItem("andersblom_stateNavClickHelp") == undefined) {
-            return (<div className="stateNav-clickable" onClick={() => {this.removeSidebarClickTip()}}><i className="fa fa-arrow-down" style={{ marginRight: "8px", marginBottom: "0px" }} aria-hidden="true"></i> (These are clickable too!)</div>);
+            return (<div className="stateNav-clickable" onClick={() => {this.removeSidebarClickTip()}}>(These icons are clickable too!)</div>);
         } else {
             return "";
         }
