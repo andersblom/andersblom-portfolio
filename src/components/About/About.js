@@ -113,6 +113,8 @@ export default class About extends Component {
           </div>
         </div>
         </ReactCSSTransitionGroup>
+        <img src={monkeyPic} style={{display: "none"}} />
+        <img src={samPic} style={{display: "none"}} />
       </div>
     );
   }
