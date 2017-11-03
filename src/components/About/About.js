@@ -4,9 +4,9 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './About.css';
 
-import dualResumePDF from './andersblom_resume_dual.pdf';
-import devResumePDF from './andersblom_resume_dev.pdf';
-import designerResumePDF from './andersblom_resume_design.pdf';
+import dualResumePDF from './andersblom_hybrid-resume.pdf';
+import devResumePDF from './andersblom_developer-resume.pdf';
+import designerResumePDF from './andersblom_designer-resume.pdf';
 
 import profilePic from '../Welcome/anders_profile.jpg';
 import monkeyPic from './monkey.jpg';
