@@ -4,6 +4,7 @@
     padding: 100px 90px 100px 60px;
     flex: 1 200px;
     @extend %font-stack-main;
+    -webkit-font-smoothing: antialiased;
 
     width: 185px;
 
