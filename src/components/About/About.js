@@ -62,7 +62,6 @@ export default class About extends Component {
               <li>Animals (I'm a cat-AND-dog-person. Yes, we exist.)</li>
             </ul>
           </div>
-          <div className="aboutParagraph"><span className="highlight">Im currently on the lookout for new full-time adventures! <br />Does this tickle your interest? <a href="mailto:anders@andersblom.dk" className="inlineResumeLink">Let's talk!</a></span></div>
 
           <div className="clientsIWorkedWith">
             <div className="clientsHeader">I’ve had the pleasure of working with some pretty interesting companies so far:</div>
